@@ -9,7 +9,6 @@
     <link type="text/css" rel="stylesheet" href="css/index.css"/>
     <link type="text/css" rel="stylesheet" href="css/swiper.min.css"/>
     <link type="text/css" rel="stylesheet" href="css/flexible.css"/>
-
     <script src="js/jquery.min.1.8.3.js"></script>
     <!--<script src="js/bootstrap.js"></script>-->
 
@@ -19,39 +18,34 @@
     <script src="js/flexible.js"></script>
     <!--<script src="js/makegrid.js"></script>-->
     <script src="js/index_floor.js"></script>
+    <script src="js/jquery.sliderBar.js"></script>
+    <script src="js/index_sidebar.js"></script>
 </head>
 <body>
     <!--header-->
     <div class="container-fluid header">
         <div class="row">
-            <div class="col-lg-1 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-5 logo">
+            <div class="col-lg-1 col-lg-push-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-5 logo">
                 <a href="#"><img src="images/logo.png"/></a>
             </div>
-            <div class="col-lg-6 col-lg-offset-4 hidden-md hidden-sm hidden-xs nav">
+            <div class="col-lg-6 col-lg-push-4 hidden-md hidden-sm hidden-xs nav" id="nav">
                 <ul class="clearfix">
                     <li class="active"><a href="#">首页</a></li>
                     <li><a href="#">项目案例<span>ˇ</span></a></li>
                     <li><a href="#">集团概况<span>ˇ</span></a></li>
                     <li><a href="#">服务范围<span>ˇ</span></a></li>
-                    <li><a href="#">产品手册<span>ˇ</span></a></li>
+                    <li><a href="#">产品手册</a></li>
                     <li><a href="#">资讯中心<span>ˇ</span></a></li>
                     <li><a href="#">联系我们</a></li>
                 </ul>
             </div>
-            <div class="hidden-lg visible-md visible-sm visible-xs col-md-1 col-md-offset-10  col-sm-1 col-sm-offset-10 col-xs-1 col-xs-offset-10 NewNav">
-                <ul><li></li><li></li><li></li></ul>
+            <div class="hidden-lg visible-md visible-sm visible-xs col-md-1 col-md-offset-10  col-sm-1 col-sm-offset-10 col-xs-1 col-xs-offset-10 NewNav" id="NewNav">
+                <!--<ul><li></li><li></li><li></li></ul>-->
+                <img src="images/icon/nav.svg"/>
             </div>
         </div>
     </div>
-    <!--banner-->
-    <!--<div class="container-fluid banner">
-        <div class="row">
-            &lt;!&ndash; style="background:url('images/banner.png') no-repeat center;background-size:cover;"&ndash;&gt;
-            <div class="wrap">
-                <img src="images/banner1.png"/>
-            </div>
-        </div>
-    </div>-->
+
     <!--banner-->
     <div class="container-fluid banner" id="banner">
         <div class="swiper-container">
@@ -67,25 +61,75 @@
     </div>
 
     <!--左导航-->
-    <div class="sidebar sidebar-left visible-lg hidden-md hidden-sm hidden-xs">
-        <div class="content ">
-            <span>MENU</span>
-            <!--<i></i>-->
+    <div class="sidebar sidebar-left visible-lg hidden-md hidden-sm hidden-xs" id="sidebar-left">
+        <div class="title">
+            <div class="cont">
+                <span>MENU</span>
+                <img src="images/icon/sidebarNav.svg"/>
+            </div>
+        </div>
+        <div class="body">
+            <div class="top"></div>
+            <div class="search">
+                <input type="text" maxlength="12"/>
+                <img src="images/sidebar-search.png"/>
+            </div>
+            <div class="sidebar-nav">
+                <div class="nav">
+                    <div class="li"><a href="#">首页</a></div>
+                    <div class="li li-has hasMenu"><a href="#">项目案例</a></div>
+                    <ul class="navContent">
+                        <li><a href="#">案例一</a></li>
+                        <li><a href="#">案例二</a></li>
+                        <li><a href="#">案例三</a></li>
+                    </ul>
+                    <div class="li li-has hasMenu"><a href="#">集团概况</a></div>
+                    <ul class="navContent">
+                        <li><a href="#">概况一</a></li>
+                        <li><a href="#">概况二</a></li>
+                        <li><a href="#">概况三</a></li>
+                    </ul>
+                    <div class="li li-has hasMenu"><a href="#">服务范围</a></div>
+                    <ul class="navContent">
+                        <li><a href="#">范围一</a></li>
+                        <li><a href="#">范围二</a></li>
+                        <li><a href="#">范围三</a></li>
+                    </ul>
+                    <div class="li"><a href="#">产品手册</a></div>
+                    <div class="li li-has hasMenu"><a href="#">资讯中心</a></div>
+                    <ul class="navContent">
+                        <li><a href="#">资讯一</a></li>
+                        <li><a href="#">资讯二</a></li>
+                        <li><a href="#">资讯三</a></li>
+                    </ul>
+                    <div class="li"><a href="#">联系我们</a></div>
+                </div>
+            </div>
+            <div class="address">
+                <ul>
+                    <li>德诚智慧家</li>
+                    <li>武汉市武昌区楚商大厦三楼</li>
+                    <li><a href="#">12345678@qq.com</a></li>
+                    <li>027-12345678</li>
+                </ul>
+            </div>
         </div>
     </div>
     <!--右导航-->
     <div class="visible-lg hidden-md hidden-sm hidden-xs sidebar sidebar-right" id="sidebar-right">
-        <ul>
-            <li class="prev"></li>
-            <li class="active li"></li>
-            <li class="li"></li>
-            <li class="li"></li>
-            <li class="li"></li>
-            <li class="li"></li>
-            <li class="li"></li>
-            <li class="li"></li>
-            <li class="next"></li>
-        </ul>
+        <div class="content">
+            <ul>
+                <li class="prev"></li>
+                <li class="active li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="li"></li>
+                <li class="next"></li>
+            </ul>
+        </div>
     </div>
     <!--案例-->
     <div class="section anli">
@@ -99,16 +143,16 @@
         </div>
         <div class="container content">
             <ul class="row">
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6"><img src="images/anli1.png"/></li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6"><img src="images/anli2.png"/></li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6"><img src="images/anli1.png"/></li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6"><img src="images/anli2.png"/></li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li"><img src="images/anli1.png"/></li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li"><img src="images/anli2.png"/></li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li"><img src="images/anli3.png"/></li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li"><img src="images/anli4.png"/></li>
             </ul>
             <ul class="row">
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6"><img src="images/anli1.png"/></li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6"><img src="images/anli2.png"/></li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6"><img src="images/anli1.png"/></li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6"><img src="images/anli2.png"/></li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li"><img src="images/anli5.png"/></li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li"><img src="images/anli6.png"/></li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li"><img src="images/anli7.png"/></li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li"><img src="images/anli8.png"/></li>
             </ul>
         </div>
     </div>
@@ -299,12 +343,12 @@
     <div class="container-fluid footer">
         <!--<div class="row">-->
             <ul class="row footerNav">
-                <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><a href="#">关于我们</a></li>
-                <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><a href="#">设计团队</a></li>
-                <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><a href="#">作品展示</a></li>
-                <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><a href="#">合作企业</a></li>
-                <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><a href="#">新闻资讯</a></li>
-                <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><a href="#">招聘信息</a></li>
+                <li class="col-lg-2 col-lg-pull-5 col-md-2 col-sm-4 col-xs-4"><a href="#">关于我们</a></li>
+                <li class="col-lg-2 col-lg-pull-3 col-md-2 col-sm-4 col-xs-4"><a href="#">设计团队</a></li>
+                <li class="col-lg-2 col-lg-pull-1 col-md-2 col-sm-4 col-xs-4"><a href="#">作品展示</a></li>
+                <li class="col-lg-2 col-lg-push-1 col-md-2 col-sm-4 col-xs-4"><a href="#">合作企业</a></li>
+                <li class="col-lg-2 col-lg-push-3 col-md-2 col-sm-4 col-xs-4"><a href="#">新闻资讯</a></li>
+                <li class="col-lg-2 col-lg-push-5 col-md-2 col-sm-4 col-xs-4"><a href="#">招聘信息</a></li>
             </ul>
         <!--</div>-->
         <div class="row">
@@ -416,7 +460,34 @@
         loop: true
     });
 </script>
+<script>
+    $(function(){
+        var win_w=$(document).width()*0.414583;
+        var win_h=$(document).height();
+        $('.sidebar-left').sliderBar({
+            open : false,
+            top :0,
+            width :win_w,
+            height :win_h,
+            theme : '#e0dfdb',
+            position : 'left',
+            bgColor:"#fff",
+            titleWidth:60,
+            titleHeight:win_h
+        });
 
+        $("#NewNav").on("click",function(){
+            $("#sidebar-left").show();
+            $("#sidebar-left .title").trigger("click");
+        });
+
+    });
+</script>
+<!--<script>
+    $(function(){
+
+    });
+</script>-->
 
 
 </html>

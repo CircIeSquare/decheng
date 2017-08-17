@@ -22,8 +22,9 @@ $(function(){
             var $section_top=$(".section").eq(index).offset().top-200;
             $('html,body').animate({
                 scrollTop:$section_top
-            },"1000","swing")
+            },"1000","swing");
         });
+
     });
     //顶部
     $('#sidebar-right .prev').on('click',function(){
