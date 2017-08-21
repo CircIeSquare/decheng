@@ -31,19 +31,88 @@
             <div class="col-lg-6 col-lg-push-4 hidden-md hidden-sm hidden-xs nav" id="nav">
                 <ul class="clearfix">
                     <li class="active"><a href="#">首页</a></li>
-                    <li><a href="#">项目案例<span>ˇ</span></a></li>
-                    <li><a href="#">集团概况<span>ˇ</span></a></li>
-                    <li><a href="#">服务范围<span>ˇ</span></a></li>
+                    <li class="hasMenu">
+                        <a href="#">项目案例<span>ˇ</span></a>
+                        <ul class="subMenu">
+                            <li><a href="#">现代风格</a></li>
+                            <li><a href="#">简约风格</a></li>
+                            <li><a href="#">美式风格</a></li>
+                        </ul>
+                    </li>
+                    <li class="hasMenu">
+                        <a href="#">集团概况<span>ˇ</span></a>
+                        <ul class="subMenu">
+                            <li><a href="#">发展历程</a></li>
+                            <li><a href="#">招聘信息</a></li>
+                            <li><a href="#">关于我们</a></li>
+                        </ul>
+                    </li>
+                    <li class="hasMenu">
+                        <a href="#">服务范围<span>ˇ</span></a>
+                        <ul class="subMenu">
+                            <li><a href="#">新房装修</a></li>
+                            <li><a href="#">老房改造</a></li>
+                            <li><a href="#">室内设计</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">产品手册</a></li>
-                    <li><a href="#">资讯中心<span>ˇ</span></a></li>
+                    <li class="hasMenu">
+                        <a href="#">资讯中心<span>ˇ</span></a>
+                        <ul class="subMenu">
+                            <li><a href="#">装修大降价</a></li>
+                            <li><a href="#">装修课堂</a></li>
+                            <li><a href="#">装修问答</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">联系我们</a></li>
                 </ul>
             </div>
             <div class="hidden-lg visible-md visible-sm visible-xs col-md-1 col-md-offset-10  col-sm-1 col-sm-offset-10 col-xs-1 col-xs-offset-10 NewNav" id="NewNav">
                 <!--<ul><li></li><li></li><li></li></ul>-->
-                <img src="images/icon/nav.svg"/>
+                <img src="images/icon/nav.svg" id="NewNav-ctr"/>
             </div>
         </div>
+    </div>
+    <!--手机端导航-->
+    <!--hidden-lg visible-md visible-sm visible-xs -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="nav">
+            <div class="li"><a href="#">首页</a></div>
+            <div class="li li-has hasMenu"><a href="#">项目案例</a></div>
+            <ul class="navContent">
+                <li><a href="#">案例一</a></li>
+                <li><a href="#">案例二</a></li>
+                <li><a href="#">案例三</a></li>
+            </ul>
+            <div class="li li-has hasMenu"><a href="#">集团概况</a></div>
+            <ul class="navContent">
+                <li><a href="#">概况一</a></li>
+                <li><a href="#">概况二</a></li>
+                <li><a href="#">概况三</a></li>
+            </ul>
+            <div class="li li-has hasMenu"><a href="#">服务范围</a></div>
+            <ul class="navContent">
+                <li><a href="#">范围一</a></li>
+                <li><a href="#">范围二</a></li>
+                <li><a href="#">范围三</a></li>
+            </ul>
+            <div class="li"><a href="#">产品手册</a></div>
+            <div class="li li-has hasMenu"><a href="#">资讯中心</a></div>
+            <ul class="navContent">
+                <li><a href="#">资讯一</a></li>
+                <li><a href="#">资讯二</a></li>
+                <li><a href="#">资讯三</a></li>
+            </ul>
+            <div class="li"><a href="#">联系我们</a></div>
+        </div>
+        <!--<div class="address">
+            <ul>
+                <li>德诚智慧家</li>
+                <li>武汉市武昌区楚商大厦三楼</li>
+                <li><a href="#">12345678@qq.com</a></li>
+                <li>027-12345678</li>
+            </ul>
+        </div>-->
     </div>
 
     <!--banner-->
@@ -143,16 +212,56 @@
         </div>
         <div class="container content">
             <ul class="row">
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li"><img src="images/anli1.png"/></li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li"><img src="images/anli2.png"/></li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li"><img src="images/anli3.png"/></li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li"><img src="images/anli4.png"/></li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li">
+                    <a href="#">
+                        <img src="images/anli1.png"/>
+                        <div class="info"><h5>现代风格</h5></div>
+                    </a>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li">
+                    <a href="#">
+                        <img src="images/anli2.png"/>
+                        <div class="info"><h5>北欧风格</h5></div>
+                    </a>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li">
+                    <a href="#">
+                        <img src="images/anli3.png"/>
+                        <div class="info"><h5>简约风格</h5></div>
+                    </a>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li">
+                    <a href="#">
+                        <img src="images/anli4.png"/>
+                        <div class="info"><h5>美式风格</h5></div>
+                    </a>
+                </li>
             </ul>
             <ul class="row">
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li"><img src="images/anli5.png"/></li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li"><img src="images/anli6.png"/></li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li"><img src="images/anli7.png"/></li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li"><img src="images/anli8.png"/></li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li">
+                    <a href="#">
+                        <img src="images/anli1.png"/>
+                        <div class="info"><h5>现代风格</h5></div>
+                    </a>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li">
+                    <a href="#">
+                        <img src="images/anli2.png"/>
+                        <div class="info"><h5>北欧风格</h5></div>
+                    </a>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li">
+                    <a href="#">
+                        <img src="images/anli3.png"/>
+                        <div class="info"><h5>简约风格</h5></div>
+                    </a>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li">
+                    <a href="#">
+                        <img src="images/anli4.png"/>
+                        <div class="info"><h5>美式风格</h5></div>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -213,7 +322,35 @@
         </div>
     </div>
     <!--智能改变生活-->
-    <div class="section zhineng" style="background:url('images/zhineng1.png') no-repeat center;background-size:cover;"></div>
+    <div class="section zhineng" style="background:url('images/zhineng2.png') no-repeat center;background-size:cover;">
+        <div class="inner container-fluid">
+            <div class="title">
+                <h2><span>智</span><span>能</span><span>改</span><span>变</span><span>生</span><span>活</span></h2>
+                <p>
+                    <span>真</span><span>正</span><span>拎</span><span>包</span><span>入</span><span>住</span><span>，</span>
+                    <span>家</span><span>居</span><span>难</span><span>题</span><span>一</span><span>部</span><span>解</span><span>决</span>
+                </p>
+            </div>
+            <ul class="row clearfix">
+                <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+                    <img src="images/zhineng-icon_01.png"/>
+                    <p><span>科</span><span>学</span><span>全</span><span>屋</span><span>定</span><span>制</span></p>
+                </li>
+                <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+                    <img src="images/zhineng-icon_02.png"/>
+                    <p><span>远</span><span>程</span><span>智</span><span>能</span><span>遥</span><span>控</span></p>
+                </li>
+                <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+                    <img src="images/zhineng-icon_03.png"/>
+                    <p><span>全</span><span>屋</span><span>环</span><span>保</span><span>材</span><span>质</span></p>
+                </li>
+                <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+                    <img src="images/zhineng-icon_04.png"/>
+                    <p><span>不</span><span>为</span><span>公</span><span>摊</span><span>买</span><span>单</span></p>
+                </li>
+            </ul>
+        </div>
+    </div>
     <!--公司介绍-->
     <div class="section container-fluid jieshao">
         <div class="row clearfix">
@@ -476,10 +613,10 @@
             titleHeight:win_h
         });
 
-        $("#NewNav").on("click",function(){
+        /*$("#NewNav-ctr").on("click",function(){
             $("#sidebar-left").show();
             $("#sidebar-left .title").trigger("click");
-        });
+        });*/
 
     });
 </script>
