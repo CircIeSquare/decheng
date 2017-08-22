@@ -3,6 +3,7 @@
  */
 
 $(function(){
+    //右导航
     $(window,document).on('scroll',function(){
         var $scroll=$(this).scrollTop();
         //滚动
@@ -24,7 +25,6 @@ $(function(){
                 scrollTop:$section_top
             },"1000","swing");
         });
-
     });
     //顶部
     $('#sidebar-right .prev').on('click',function(){

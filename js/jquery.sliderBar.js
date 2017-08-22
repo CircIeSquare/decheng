@@ -1,34 +1,5 @@
 /***************************************************************************************
- 侧边栏插件
- @autor     iProg
- @date      2016-01-25
- @version   1.0
-
- 使用方法：
- 在页面建立html标签如下：
- <div class="sliderbar-container">
-    <div class="title"><i></i> 通知消息</div>
-    <div class="body">
-        无消息
-    </div>
- </div>
-
- 说明：上面的class属性值，除了sliderbar-container1可以随意更改，其它的如title，body都
-       不能更改哦！
- 
- 然后加入js代码如下，就可以了:
- <script type="text/javascript">
- $(function(){
-    $('.sliderbar-container').sliderBar({
-        open : true,
-        top : 200,
-        width : 360,
-        height : 240,
-        theme : '#463eee',
-        position : 'right'
-    });
- });
- </script>
+ 侧边栏
 ****************************************************************************************/
 ;(function ($) {
     $.fn.extend({
@@ -48,8 +19,8 @@
                 privateMethods.initSliderBarCss($this,opts);
                 //根据方向调用方法
                 switch(opts.position){
-                    case 'right' : privateMethods.showAtRight($this,opts); break;
-                    case 'left'  : privateMethods.showAtLeft($this,opts); break;
+                    case 'right' : privateMethods.showAtRight($this,opts);break;
+                    case 'left'  : privateMethods.showAtLeft($this,opts);break;
                 };
                 
             });
