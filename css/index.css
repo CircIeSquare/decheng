@@ -225,7 +225,18 @@ body{position:relative;overflow-x:hidden;}
 }
 .shiping .row .txt li{margin-bottom:0.759rem;}
 .shiping .row .txt li .icon{width:8.59%;height:1.46rem;float:left;margin-right:3.9%;}
-.shiping .row .txt li .icon img{width:100%;}
+.shiping .row .txt li .icon img{width:100%;height:100%;border-radius:50%;animation:iconAnimate 1s linear infinite alternate;}
+
+@keyframes iconAnimate{
+    0%{box-shadow:0 0 2px 0 #66c6f0;}
+    20%{box-shadow:0 0 4px 0 #66c3f1;}
+    40%{box-shadow:0 0 6px 0 #68b9f2;}
+    60%{box-shadow:0 0 8px 0 #69b4f3;}
+    80%{box-shadow:0 0 10px 0 #6aaaf5;}
+    100%{box-shadow:0 0 12px 0 #6aaaf5;}
+}
+
+
 .shiping .row .txt li .info{float:left;width:74.11%;}
 .shiping .row .txt li .info h3{
     /*height:24px;line-height:24px;font-size:18px;*/
