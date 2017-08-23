@@ -286,8 +286,17 @@ body{position:relative;overflow-x:hidden;}
 .zhineng .inner ul{/*padding-top:16px;*/padding-top:0.296rem;display:inline-block;}
 .zhineng .inner ul li{float:left;/*padding:0 70px;*/box-sizing:content-box;/*padding:0 1.296rem;*/width:2.407rem;margin-right:2.59rem;}
 .zhineng .inner ul li:last-child{margin-right:0;}
-.zhineng .inner ul li img{width:1.75rem;;height:1.7592rem;cursor:pointer;transition:all .8s linear;}
-.zhineng .inner ul li img:hover{transform:rotate(360deg);}
+.zhineng .inner ul li img{width:1.75rem;;height:1.7592rem;cursor:pointer;transition:all 1s linear;}
+.zhineng .inner ul li img:hover{animation:zhinengIcon 1s linear alternate;}
+@keyframes zhinengIcon {
+    0%{transform:rotate(0deg);}
+    20%{transform:rotate(180deg);}
+    40%{transform:rotate(360deg);}
+    60%{transform:scale(1.05);}
+    80%{transform:scale(1.1);}
+    100%{transform:scale(1.15);;}
+}
+
 .zhineng .inner ul li p{/*padding-top:17px;font-size:20px;*/padding-top:0.3148rem;font-size:0.37rem;}
 .zhineng .inner ul li p span:nth-child(1){color:#64d6ee;}
 .zhineng .inner ul li p span:nth-child(2){color:#67bff1;}
