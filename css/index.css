@@ -237,6 +237,10 @@ body{position:relative;overflow-x:hidden;}
     100%{box-shadow:0 0 12px 0 #6aaaf5;}
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0563efddb4b2256e614ac82035eee83a354dbd97
 .shiping .row .txt li .info{float:left;width:74.11%;}
 .shiping .row .txt li .info h3{
     /*height:24px;line-height:24px;font-size:18px;*/
@@ -287,13 +291,20 @@ body{position:relative;overflow-x:hidden;}
 .zhineng .inner ul li{float:left;/*padding:0 70px;*/box-sizing:content-box;/*padding:0 1.296rem;*/width:2.407rem;margin-right:2.59rem;}
 .zhineng .inner ul li:last-child{margin-right:0;}
 .zhineng .inner ul li img{width:1.75rem;;height:1.7592rem;cursor:pointer;transition:all 1s linear;}
+<<<<<<< HEAD
 .zhineng .inner ul li img:hover{animation:zhinengIcon 1s linear infinite alternate;}
 @keyframes zhinengIcon {
     /*0%{transform:rotate(0deg);}
+=======
+.zhineng .inner ul li img:hover{animation:zhinengIcon 1s linear alternate;}
+@keyframes zhinengIcon {
+    0%{transform:rotate(0deg);}
+>>>>>>> 0563efddb4b2256e614ac82035eee83a354dbd97
     20%{transform:rotate(180deg);}
     40%{transform:rotate(360deg);}
     60%{transform:scale(1.05);}
     80%{transform:scale(1.1);}
+<<<<<<< HEAD
     100%{transform:scale(1.15);}*/
     0%{transform:rotate(0deg) scale(1);}
     25%{transform:rotate(90deg) scale(1.05);}
@@ -301,6 +312,9 @@ body{position:relative;overflow-x:hidden;}
     75%{transform:rotate(270deg) scale(1.1);}
     80%{transform:rotate(360deg) scale(1.15);}
     100%{transform:rotate(360deg) scale(1.15);}
+=======
+    100%{transform:scale(1.15);;}
+>>>>>>> 0563efddb4b2256e614ac82035eee83a354dbd97
 }
 
 .zhineng .inner ul li p{/*padding-top:17px;font-size:20px;*/padding-top:0.3148rem;font-size:0.37rem;}
@@ -560,8 +574,11 @@ body{position:relative;overflow-x:hidden;}
     .shiping .row .txt li .icon{width:12.59%;}
     /*智能*/
     .zhineng .inner ul .col-sm-4,.zhineng .inner ul .col-xs-4{padding:0;margin-right:0;}
+<<<<<<< HEAD
     /*设计师*/
     .shejishi .swiper-container2 .swiper-wrapper .swiper-slide .Btn{margin:0.574rem auto 0;}
+=======
+>>>>>>> 0563efddb4b2256e614ac82035eee83a354dbd97
 }
 
 @media screen and (max-width:640px){
@@ -581,6 +598,3 @@ body{position:relative;overflow-x:hidden;}
     /*视频*/
     .shiping .row .txt li .icon{width:19.59%;}
 }
-
-
-
