@@ -58,10 +58,10 @@ $(function(){
             //品牌
             toBottom(".pinpai .title","animated fadeInUp");
             toBottom(".pinpai .picture li:eq(0)"," animated fadeInLeft pt-page-delay100");
-            toBottom(".pinpai .picture li:eq(1)","animated fadeInRight pt-page-delay200");
-            toBottom(".pinpai .picture li:eq(2)","animated fadeInRight pt-page-delay300");
-            toBottom(".pinpai .picture li:eq(3)","animated fadeInRight pt-page-delay400");
-            toBottom(".pinpai .picture li:eq(4)","animated fadeInRight pt-page-delay500");
+            toBottom(".pinpai .picture li:eq(1)","animated fadeInLeft pt-page-delay200");
+            toBottom(".pinpai .picture li:eq(2)","animated fadeInLeft pt-page-delay300");
+            toBottom(".pinpai .picture li:eq(3)","animated fadeInLeft pt-page-delay400");
+            toBottom(".pinpai .picture li:eq(4)","animated fadeInLeft pt-page-delay500");
             toBottom(".pinpai .picture li:eq(5)","animated fadeInRight pt-page-delay100");
             toBottom(".pinpai .picture li:eq(6)","animated fadeInRight pt-page-delay200");
             toBottom(".pinpai .picture li:eq(7)","animated fadeInRight pt-page-delay300");
