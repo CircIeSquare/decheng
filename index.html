@@ -10,20 +10,26 @@
     <link type="text/css" rel="stylesheet" href="css/index.css"/>
     <link type="text/css" rel="stylesheet" href="css/animate.css"/>
     <link type="text/css" rel="stylesheet" href="css/animation.css"/>
+    <!--百叶窗-->
+    <link type="text/css" rel="stylesheet" href="css/osSlider.css"/>
+
     <script src="js/jquery.min.1.8.3.js"></script>
     <script src="js/swiper.min.js"></script>
     <!--初始化移动端样式-->
     <script src="js/flexible_css.js"></script>
     <!--设置dpr和rem-->
     <script src="js/flexible.js"></script>
+    <!--百叶窗-->
+    <script src="js/osSlider.min.js"></script>
     <!--右导航-->
     <script src="js/index_floor.js"></script>
-    <!--左导航工具-->
+    <!--左导航-->
     <script src="js/jquery.sliderBar.js"></script>
     <!--左导航-->
     <script src="js/index_sidebar.js"></script>
     <!--动画-->
     <script src="js/scroll_animation.js"></script>
+
 </head>
 <body>
     <!--header-->
@@ -119,9 +125,9 @@
         </div>-->
     </div>
     <!--banner-->
-    <div class="container-fluid banner" id="banner">
+    <!--<div class="container-fluid banner" id="banner">
         <div class="swiper-container">
-            <!-- Swiper -->
+            &lt;!&ndash; Swiper &ndash;&gt;
             <div class="swiper-wrapper">
                 <div class="swiper-slide swiper-slide1"><a href="#" target="_blank"><img src="images/banner.png"/></a></div>
                 <div class="swiper-slide swiper-slide2"><a href="#" target="_blank"><img src="images/banner2.png"/></a></div>
@@ -130,7 +136,15 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
+    </div>-->
+    <div class="container-fluid slider banner" id="banner">
+        <ul class="slider-main">
+            <li><img src="images/banner.png" alt=""></li>
+            <li><img src="images/banner2.png" alt=""></li>
+            <li><img src="images/banner3.png" alt=""></li>
+        </ul>
     </div>
+
     <!--左导航-->
     <div class="sidebar sidebar-left visible-lg hidden-md hidden-sm hidden-xs" id="sidebar-left">
         <div class="title">
@@ -523,8 +537,20 @@
     </div>
 </body>
 
+
+
+
+<script type="text/javascript">
+    var slider = new osSlider({//开始创建效果
+        pNode:'.slider', //容器的选择器 必填
+        cNode:'.slider-main li', //轮播体的选择器 必填
+        speed:3000, //速度 默认3000 可不填写
+        autoPlay:true //是否自动播放 默认true 可不填写
+    });
+</script>
+
 <script>
-    var swiper = new Swiper('.swiper-container', {
+    /*var swiper = new Swiper('.swiper-container', {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         paginationClickable: true,
@@ -534,13 +560,13 @@
         autoplayDisableOnInteraction: false,
         slidesPerView: 1,
         loop: true
-    });
+    });*/
 </script>
 <script>
     var swiper2 = new Swiper('.swiper-container2', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 50,
         breakpoints: {
             1440: {
@@ -607,7 +633,7 @@
             top :0,
             width :win_w,
             height :win_h,
-            theme : '#e0dfdb',
+            theme : '#fff',
             position : 'left',
             bgColor:"#fff",
             titleWidth:60,

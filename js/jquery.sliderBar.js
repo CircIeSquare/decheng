@@ -50,9 +50,9 @@
                 'width': opts.width+'px',
                 'height' : opts.height+'px',
                 'top' : opts.top+'px',
-                /*'border' : '1px solid '+opts.theme,*/
+                'border': '1px solid '+opts.theme,
                 'position':'fixed',
-                'font-family':'Microsoft Yahei',
+                'font-family':'Microsoft YaHei',
                 'z-index': '9999'
             }).find('.body').css({
                 'width': opts.width+'px',
@@ -61,7 +61,7 @@
                 'padding':'20px 30px',
                 'overflow-x':'hidden',
                 'overflow-y':'auto',
-                'font-family':'Microsoft Yahei',
+                'font-family':'Microsoft YaHei',
                 'font-size': '12px',
                 'margin':'0px',
                 'background':opts.bgColor
@@ -82,34 +82,30 @@
                 'font-family':'Microsoft Yahei'
             };
 
-
             //设置标题样式
-            obj.find('.title').css(titleCss).find('i').css({
-                'font-size': '15px'
-            });
-
+            obj.find('.title').css(titleCss);
         },
 
         //左侧栏样式
         showAtLeft : function(obj, opts){
-            //判断是否设置展开,设置obj和title样式
+            //判断参数中是否设置展开,设置obj和title样式
             if(opts.open){
                 obj.css({left:'0px'});
                 //obj.find('.title').css('right','-25px').find('i').attr('class','fa fa-chevron-circle-left');
-                obj.find('.title').css('right',(-opts.titleWidth)+'px').find('i').attr('class','fa fa-chevron-circle-left');
+                obj.find('.title').css('right',(-opts.titleWidth)+'px');
             }else{
                 obj.css({left:-opts.width+'px'});
                 //obj.find('.title').css('right','-25px').find('i').attr('class','fa fa-chevron-circle-right');
-                obj.find('.title').css('right',(-opts.titleWidth)+'px').find('i').attr('class','fa fa-chevron-circle-right');
+                obj.find('.title').css('right',(-opts.titleWidth)+'px');
             }
-
+            //点击title滑动body
             obj.find('.title').click(function(){
                 if(obj.data('open')){
-                    obj.animate({left:-opts.width+'px'}, 500);
-                    $(this).find('i').attr('class','fa fa-chevron-circle-right');
+                    obj.animate({left:-opts.width+'px'},500);
+                    //$(this).find('i').attr('class','fa fa-chevron-circle-right');
                 }else{
                     obj.animate({left:'0px'}, 500);
-                    $(this).find('i').attr('class','fa fa-chevron-circle-left');
+                    //$(this).find('i').attr('class','fa fa-chevron-circle-left');
                 }
                 obj.data('open',obj.data('open') == true ? false : true);
             });
@@ -118,19 +114,23 @@
         showAtRight : function(obj,opts){
             if(opts.open){
                 obj.css({right:'0px'});
-                obj.find('.title').css('right',opts.width+20+'px').find('i').attr('class','fa fa-chevron-circle-right');
+                //obj.find('.title').css('right',opts.width+20+'px').find('i').attr('class','fa fa-chevron-circle-right');
+                obj.find('.title').css('left',(-opts.titleWidth)+'px');
             }else{
-                obj.css({right:'25px'});
-                obj.find('.title').css('right', opts.width+20+'px').find('i').attr('class','fa fa-chevron-circle-left');
+                //obj.css({right:'25px'});
+                obj.css({right:-opts.width+'px'});
+                //obj.find('.title').css('right', opts.width+20+'px').find('i').attr('class','fa fa-chevron-circle-left');
+                obj.find('.title').css('left',(-opts.titleWidth)+'px');
             }
 
             obj.find('.title').click(function(){
                 if(obj.data('open')){
-                    obj.animate({right:-opts.width-22+'px'}, 500);
-                    $(this).find('i').attr('class','fa fa-chevron-circle-left');
+                    //obj.animate({right:-opts.width-22+'px'}, 500);
+                    obj.animate({right:-opts.width+'px'}, 500);
+                    //$(this).find('i').attr('class','fa fa-chevron-circle-left');
                 }else{
                     obj.animate({right:'0px'}, 500);
-                    $(this).find('i').attr('class','fa fa-chevron-circle-right');
+                    //$(this).find('i').attr('class','fa fa-chevron-circle-right');
                 }
                 obj.data('open',obj.data('open') == true ? false : true);
             });
