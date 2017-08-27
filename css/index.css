@@ -567,7 +567,8 @@ body{position:relative;overflow-x:hidden;}
     .mobile-nav{top:50px;}
     .mobile-nav .nav .hasMenu{background-position:7.9rem 0;}
     .mobile-nav .nav .currentMenu{background-position:7.9rem 0;}
-
+    
+    .banner .swiper-container{width:100%;}
     /*案例*/
     .anli .content .row .li{height:3.074rem;}
     /*视频*/
