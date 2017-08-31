@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1，user-scalable=no">
     <title>德诚智慧家</title>
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
     <link type="text/css" rel="stylesheet" href="css/swiper.min.css"/>
@@ -83,47 +83,6 @@
             </div>
         </div>
     </div>
-    <!--手机端导航-->
-    <div class="mobile-nav" id="mobile-nav">
-        <div class="nav">
-            <div class="li"><a href="#">首页</a></div>
-            <div class="li li-has hasMenu"><a href="#">项目案例</a></div>
-            <ul class="navContent">
-                <li><a href="#">现代风格</a></li>
-                <li><a href="#">简约风格</a></li>
-                <li><a href="#">美式风格</a></li>
-                <li><a href="#">欧式风格</a></li>
-            </ul>
-            <div class="li li-has hasMenu"><a href="#">集团概况</a></div>
-            <ul class="navContent">
-                <li><a href="#">发展历程</a></li>
-                <li><a href="#">招聘信息</a></li>
-                <li><a href="#">关于我们</a></li>
-            </ul>
-            <div class="li li-has hasMenu"><a href="#">服务范围</a></div>
-            <ul class="navContent">
-                <li><a href="#">新房装修</a></li>
-                <li><a href="#">老房改造</a></li>
-                <li><a href="#">室内设计</a></li>
-            </ul>
-            <div class="li"><a href="#">产品手册</a></div>
-            <div class="li li-has hasMenu"><a href="#">资讯中心</a></div>
-            <ul class="navContent">
-                <li><a href="#">装修大降价</a></li>
-                <li><a href="#">装修课堂</a></li>
-                <li><a href="#">装修问答</a></li>
-            </ul>
-            <div class="li"><a href="#">联系我们</a></div>
-        </div>
-        <!--<div class="address">
-            <ul>
-                <li>德诚智慧家</li>
-                <li>武汉市武昌区楚商大厦三楼</li>
-                <li><a href="#">12345678@qq.com</a></li>
-                <li>027-12345678</li>
-            </ul>
-        </div>-->
-    </div>
     <!--banner-->
     <!--<div class="container-fluid banner" id="banner">
         <div class="swiper-container">
@@ -146,7 +105,7 @@
     </div>
 
     <!--左导航-->
-    <div class="sidebar sidebar-left visible-lg hidden-md hidden-sm hidden-xs" id="sidebar-left">
+    <div class="sidebar sidebar-left visible-lg visible-md visible-xs visible-sm" id="sidebar-left">
         <div class="title">
             <div class="cont">
                 <span>MENU</span>
@@ -158,6 +117,9 @@
             <div class="search">
                 <input type="text" maxlength="12"/>
                 <img src="images/sidebar-search.png"/>
+                <div class="close hid-lg visible-md visible-sm visible-xs">
+                    <img src="images/icon/close.svg"/>
+                </div>
             </div>
             <div class="sidebar-nav">
                 <div class="nav">
@@ -283,7 +245,7 @@
         </div>
     </div>
     <!--宣传视频-->
-    <div class="section container-fluid shiping">
+    <div class="section container-fluid shiping" id="shipin">
         <div class="row">
             <div class="col-lg-4 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 media">
                 <div class="bg"></div>
@@ -309,35 +271,102 @@
         </div>
         <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-wrap">
-                <ul class="txt clearfix">
-                    <li class="clearfix">
-                        <div class="icon"><img src="images/shipin-ico1.png"/></div>
-                        <div class="info">
-                            <h3>XXXX灯光控制系统</h3>
-                            <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
-                            固定和保护光源所需的全部零件，以</p>
-                        </div>
-                    </li>
-                    <li class="clearfix">
-                        <div class="icon"><img src="images/shipin-ico2.png"/></div>
-                        <div class="info">
-                            <h3>XXXX家电控制系统</h3>
-                            <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
-                                固定和保护光源所需的全部零件，以</p>
-                        </div>
-                    </li>
-                    <li class="clearfix">
-                        <div class="icon"><img src="images/shipin-ico3.png"/></div>
-                        <div class="info">
-                            <h3>XXXX安防监控系统</h3>
-                            <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
-                                固定和保护光源所需的全部零件，以</p>
-                        </div>
-                    </li>
-                </ul>
+                    <div class="txt">
+                        <ul class="txt-ctr clearfix">
+                            <li class="clearfix">
+                                <div class="icon"><img src="images/shipin-ico1.png"/></div>
+                                <div class="info">
+                                    <h3><a href="#">XXXX灯光控制系统</a></h3>
+                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
+                                        固定和保护光源所需的全部零件，以</p>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="icon"><img src="images/shipin-ico2.png"/></div>
+                                <div class="info">
+                                    <h3><a href="#">XXXX家电控制系统</a></h3>
+                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
+                                        固定和保护光源所需的全部零件，以</p>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="icon"><img src="images/shipin-ico3.png"/></div>
+                                <div class="info">
+                                    <h3><a href="#">XXXX安防监控系统</a></h3>
+                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
+                                        固定和保护光源所需的全部零件，以</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="txt-ctr clearfix">
+                            <li class="clearfix">
+                                <div class="icon"><img src="images/shipin-ico2.png"/></div>
+                                <div class="info">
+                                    <h3><a href="#">XXXX家电控制系统</a></h3>
+                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
+                                        固定和保护光源所需的全部零件，以</p>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="icon"><img src="images/shipin-ico3.png"/></div>
+                                <div class="info">
+                                    <h3><a href="#">XXXX安防监控系统</a></h3>
+                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
+                                        固定和保护光源所需的全部零件，以</p>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="icon"><img src="images/shipin-ico1.png"/></div>
+                                <div class="info">
+                                    <h3><a href="#">XXXX灯光控制系统</a></h3>
+                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
+                                        固定和保护光源所需的全部零件，以</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="txt-ctr clearfix">
+                            <li class="clearfix">
+                                <div class="icon"><img src="images/shipin-ico3.png"/></div>
+                                <div class="info">
+                                    <h3><a href="#">XXXX安防监控系统</a></h3>
+                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
+                                        固定和保护光源所需的全部零件，以</p>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="icon"><img src="images/shipin-ico2.png"/></div>
+                                <div class="info">
+                                    <h3><a href="#">XXXX家电控制系统</a></h3>
+                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
+                                        固定和保护光源所需的全部零件，以</p>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="icon"><img src="images/shipin-ico1.png"/></div>
+                                <div class="info">
+                                    <h3><a href="#">XXXX灯光控制系统</a></h3>
+                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
+                                        固定和保护光源所需的全部零件，以</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="ctr-btn clearfix">
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
             </div>
             <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 pic">
-                <img src="images/shipin-pic.png"/>
+                <img src="images/shipin-pic.png" class="img"/>
+                <img src="images/shipin-pic.png" class="img"/>
+                <img src="images/shipin-pic.png" class="img"/>
+                <img src="images/shipin-pic.png" class="img"/>
+                <img src="images/shipin-pic.png" class="img"/>
+                <img src="images/shipin-pic.png" class="img"/>
+                <img src="images/shipin-pic.png" class="img"/>
+                <img src="images/shipin-pic.png" class="img"/>
+                <img src="images/shipin-pic.png" class="img"/>
             </div>
         </div>
     </div>
@@ -537,9 +566,6 @@
     </div>
 </body>
 
-
-
-
 <script type="text/javascript">
     var slider = new osSlider({//开始创建效果
         pNode:'.slider', //容器的选择器 必填
@@ -547,20 +573,12 @@
         speed:3000, //速度 默认3000 可不填写
         autoPlay:true //是否自动播放 默认true 可不填写
     });
-</script>
 
-<script>
-    /*var swiper = new Swiper('.swiper-container', {
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        paginationClickable: true,
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: 2000,
-        autoplayDisableOnInteraction: false,
-        slidesPerView: 1,
-        loop: true
-    });*/
+    $(function(){
+        //banner文字清空
+        $(".slider-btn-prev").text("");
+        $(".slider-btn-next").text("");
+    });
 </script>
 <script>
     var swiper2 = new Swiper('.swiper-container2', {
@@ -626,19 +644,31 @@
 </script>
 <script>
     $(function(){
-        var win_w=$(document).width()*0.414583;
+        var win_w=$(document).width();
         var win_h=$(document).height();
+        var win_w_state;
+        var title_W;
+
+        if(win_w<=1200){
+            win_w_state=$(document).width();
+            title_W=0;
+        }else{
+            win_w_state=$(document).width()*0.414583;
+            title_W=60;
+        };
+
         $('.sidebar-left').sliderBar({
             open : false,
             top :0,
-            width :win_w,
+            width :win_w_state,
             height :win_h,
             theme : '#fff',
             position : 'left',
             bgColor:"#fff",
-            titleWidth:60,
+            titleWidth:title_W,
             titleHeight:win_h
         });
+
     });
 </script>
 

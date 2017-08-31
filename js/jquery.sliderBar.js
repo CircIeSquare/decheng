@@ -53,7 +53,8 @@
                 'border': '1px solid '+opts.theme,
                 'position':'fixed',
                 'font-family':'Microsoft YaHei',
-                'z-index': '9999'
+                'z-index': "9999",
+                'display':"block !important"
             }).find('.body').css({
                 'width': opts.width+'px',
                 'height' : opts.height+'px',
@@ -101,10 +102,10 @@
             //点击title滑动body
             obj.find('.title').click(function(){
                 if(obj.data('open')){
-                    obj.animate({left:-opts.width+'px'},500);
+                    obj.css({"display":"none"}).animate({left:-opts.width+'px'},500);
                     //$(this).find('i').attr('class','fa fa-chevron-circle-right');
                 }else{
-                    obj.animate({left:'0px'}, 500);
+                    obj.css({"display":"block !important"}).animate({left:'0px'}, 500);
                     //$(this).find('i').attr('class','fa fa-chevron-circle-left');
                 }
                 obj.data('open',obj.data('open') == true ? false : true);
@@ -126,10 +127,10 @@
             obj.find('.title').click(function(){
                 if(obj.data('open')){
                     //obj.animate({right:-opts.width-22+'px'}, 500);
-                    obj.animate({right:-opts.width+'px'}, 500);
+                    obj.css({"display":"none"}).animate({right:-opts.width+'px'}, 500);
                     //$(this).find('i').attr('class','fa fa-chevron-circle-left');
                 }else{
-                    obj.animate({right:'0px'}, 500);
+                    obj.css({"display":"block !important"}).animate({right:'0px'}, 500);
                     //$(this).find('i').attr('class','fa fa-chevron-circle-right');
                 }
                 obj.data('open',obj.data('open') == true ? false : true);

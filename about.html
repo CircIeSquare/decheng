@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1，user-scalable=no">
+    <title>关于我们</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="css/about.css"/>
+
+    <!--初始化移动端样式-->
+    <script src="js/flexible_css.js"></script>
+    <!--设置dpr和rem-->
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.min.1.8.3.js"></script>
+    <script src="js/jquery.sliderBar.js"></script>
+    <script src="js/index_sidebar.js"></script>
+</head>
+<body>
+    <!--header-->
+    <div class="container-fluid header">
+        <div class="row">
+            <div class="col-lg-1 col-lg-push-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-5 logo">
+                <a href="#"><img src="images/logo.png"/></a>
+            </div>
+            <div class="col-lg-6 col-lg-push-4 hidden-md hidden-sm hidden-xs nav" id="nav">
+                <ul class="clearfix">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li class="hasMenu">
+                        <a href="#">项目案例<span>ˇ</span></a>
+                        <ul class="subMenu">
+                            <li><a href="#">现代风格</a></li>
+                            <li><a href="#">简约风格</a></li>
+                            <li><a href="#">美式风格</a></li>
+                            <li><a href="#">欧式风格</a></li>
+                        </ul>
+                    </li>
+                    <li class="hasMenu">
+                        <a href="#">集团概况<span>ˇ</span></a>
+                        <ul class="subMenu">
+                            <li><a href="#">发展历程</a></li>
+                            <li><a href="#">招聘信息</a></li>
+                            <li><a href="#">关于我们</a></li>
+                        </ul>
+                    </li>
+                    <li class="hasMenu">
+                        <a href="#">服务范围<span>ˇ</span></a>
+                        <ul class="subMenu">
+                            <li><a href="#">新房装修</a></li>
+                            <li><a href="#">老房改造</a></li>
+                            <li><a href="#">室内设计</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">产品手册</a></li>
+                    <li class="hasMenu">
+                        <a href="#">资讯中心<span>ˇ</span></a>
+                        <ul class="subMenu">
+                            <li><a href="#">装修大降价</a></li>
+                            <li><a href="#">装修课堂</a></li>
+                            <li><a href="#">装修问答</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="hidden-lg visible-md visible-sm visible-xs col-md-1 col-md-offset-10  col-sm-1 col-sm-offset-10 col-xs-1 col-xs-offset-10 NewNav" id="NewNav">
+                <img src="images/icon/nav.svg" id="NewNav-ctr"/>
+            </div>
+        </div>
+    </div>
+
+    <!--banner-->
+    <div class="container-fluid banner">
+        <div class="row">
+            <img src="images/about-banner.png"/>
+        </div>
+    </div>
+    <!--左导航-->
+    <div class="sidebar sidebar-left visible-lg visible-md visible-xs visible-sm" id="sidebar-left">
+        <div class="title">
+            <div class="cont">
+                <span>MENU</span>
+                <img src="images/icon/sidebarNav.svg"/>
+            </div>
+        </div>
+        <div class="body">
+            <div class="top"></div>
+            <div class="search">
+                <input type="text" maxlength="12"/>
+                <img src="images/sidebar-search.png"/>
+                <div class="close hid-lg visible-md visible-sm visible-xs">
+                    <img src="images/icon/close.svg"/>
+                </div>
+            </div>
+            <div class="sidebar-nav">
+                <div class="nav">
+                    <div class="li"><a href="#">首页</a></div>
+                    <div class="li li-has hasMenu"><a href="#">项目案例</a></div>
+                    <ul class="navContent">
+                        <li><a href="#">现代风格</a></li>
+                        <li><a href="#">简约风格</a></li>
+                        <li><a href="#">美式风格</a></li>
+                        <li><a href="#">欧式风格</a></li>
+                    </ul>
+                    <div class="li li-has hasMenu"><a href="#">集团概况</a></div>
+                    <ul class="navContent">
+                        <li><a href="#">发展历程</a></li>
+                        <li><a href="#">招聘信息</a></li>
+                        <li><a href="#">关于我们</a></li>
+                    </ul>
+                    <div class="li li-has hasMenu"><a href="#">服务范围</a></div>
+                    <ul class="navContent">
+                        <li><a href="#">新房装修</a></li>
+                        <li><a href="#">老房改造</a></li>
+                        <li><a href="#">室内设计</a></li>
+                    </ul>
+                    <div class="li"><a href="#">产品手册</a></div>
+                    <div class="li li-has hasMenu"><a href="#">资讯中心</a></div>
+                    <ul class="navContent">
+                        <li><a href="#">装修大降价</a></li>
+                        <li><a href="#">装修课堂</a></li>
+                        <li><a href="#">装修问答</a></li>
+                    </ul>
+                    <div class="li"><a href="#">联系我们</a></div>
+                </div>
+            </div>
+            <div class="address">
+                <ul>
+                    <li>德诚智慧家</li>
+                    <li>武汉市武昌区楚商大厦三楼</li>
+                    <li><a href="#">12345678@qq.com</a></li>
+                    <li>027-12345678</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--section0-->
+    <div class="section0">
+        <div class="page-title">
+            <h2>丰富、完整的七大全宅智能系统</h2>
+            <div class="line"></div>
+        </div>
+        <div class="content"><img src="images/about-section0-bg_03.jpg"/></div>
+    </div>
+    <!--section1-->
+    <div class="section1">
+        <div class="page-title">
+            <h2>更简单、实用、安全、可靠的智能家居系统</h2>
+            <div class="line"></div>
+        </div>
+        <div class="row content">
+            <ul class="clearfix">
+                <li class="col-lg-2 col-md-2 col-sm-1 col-xs-1 li visible-lg visible-md visible-sm visible-xs">
+                    <div class="num">No.1</div>
+                    <img src="images/about-section1-icon_1.png"/>
+                    <h3>简单安装</h3>
+                    <p>无线通讯技术<br/>无需布线</p>
+                </li>
+                <li class="col-lg-2 col-md-2 col-sm-1 col-xs-1 li visible-lg visible-md visible-sm visible-xs">
+                    <div class="num">No.2</div>
+                    <img src="images/about-section1-icon_2.png"/>
+                    <h3>实用便捷</h3>
+                    <p>更人性化的产品设计<br/>更简单的使用方式</p>
+                </li>
+                <li class="col-lg-2 col-md-2 col-sm-1 col-xs-1 li visible-lg visible-md visible-sm visible-xs">
+                    <div class="num">No.3</div>
+                    <img src="images/about-section1-icon_3.png"/>
+                    <h3>安全可靠</h3>
+                    <p>金融级的智能家居<br/>云平台</p>
+                </li>
+                <li class="col-lg-2 col-md-2 col-sm-1 col-xs-1 li visible-lg visible-md hidden-sm hidden-sm">
+                    <div class="num">No.4</div>
+                    <img src="images/about-section1-icon_4.png"/>
+                    <h3>兼容扩展性强</h3>
+                    <p>新增设备任意连接跨品<br/>牌产品可实现互联互通</p>
+                </li>
+                <li class="col-lg-2 col-md-2 col-sm-1 col-xs-1 li visible-lg visible-md hidden-sm hidden-sm">
+                    <div class="num">No.5</div>
+                    <img src="images/about-section1-icon_5.png"/>
+                    <h3>超低功耗</h3>
+                    <p>无线通讯技术，稳定、<br/>可靠、超低功耗</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--section2-->
+    <div class="container-fluid section2">
+        <div class="row row1">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pic">
+                <img src="images/about-section2-pic1.png"/>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text">
+                <div class="page-title">
+                    <h2>回家模式</h2>
+                    <div class="line"></div>
+                    <h3>一打开门，仿佛有人迎接你回家</h3>
+                    <p>当你在这座城市努力拼搏，夜班到家，只要用指纹轻轻打开家门，
+                        玄关、过道、客厅的灯光全部自动亮起，窗帘缓缓打开，柔和舒适
+                        的灯光瞬间映入眼帘，让拼搏的你终于有了家的温情。</p>
+                    <img src="images/about-section2-img1.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text">
+                <div class="page-title">
+                    <h2>离家模式</h2>
+                    <div class="line"></div>
+                    <h3>不放过任何一点风吹草动，守护家庭安全</h3>
+                    <p>当没人在家的时候，布防模式正在运行，玄关、窗户、走廊处的门
+                        窗磁传感器和人体传感器一旦触发，智能摄像机将立即录像，并拨
+                        打报警电话提醒你，全方位守护家庭安全。</p>
+                    <img src="images/about-section2-img2.png"/>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pic">
+                <img src="images/about-section2-pic2.png"/>
+            </div>
+        </div>
+        <div class="row  row3">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pic">
+                <img src="images/about-section2-pic3.png"/>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text">
+                <div class="page-title">
+                    <h2>娱乐模式</h2>
+                    <div class="line"></div>
+                    <h3>在家也能浪漫约会，让家庭成为幸福的港湾</h3>
+                    <p>当你和爱人想在家里看电影的时候，只要一键开启娱乐模式，
+                        DVD、音响、电视全部自动打开，窗帘缓缓拉上，灯光变幻绚丽的
+                        色彩，让你在家就有影院版的享受。此外还有烛光晚餐场景、派对
+                        场景等任意切换。</p>
+                    <img src="images/about-section2-img2.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="row row4">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text">
+                <div class="page-title">
+                    <h2>远程控制模式</h2>
+                    <div class="line"></div>
+                    <h3>远程查看，不错过家人的重要时刻</h3>
+                    <p>出差在外，总惦记着家里亲人？只要打开智家365APP，就可随时
+                        随地查看家人动态，还可以通过智能摄像机进行语音通话，不错过
+                        家人的重要时刻。</p>
+                    <img src="images/about-section2-img3.png"/>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pic">
+                <img src="images/about-section2-pic4.png"/>
+            </div>
+        </div>
+
+    </div>
+    <!--section3-->
+    <div class="section3"></div>
+    <!--友链-->
+    <div class="friendlyLink visible-lg hidden-md hidden-md hidden-sm hidden-xs">
+        <ul>
+            <li>友情链接:</li>
+            <li><a href="#">/  泥巴公社</a></li>
+            <li><a href="#">/  苹果装饰</a></li>
+            <li><a href="#">/  面包与纽扣</a></li>
+        </ul>
+    </div>
+    <!--footer-->
+    <div class="container-fluid footer">
+        <ul class="row footerNav">
+            <li class="col-lg-2 col-lg-pull-5 col-md-2 col-sm-4 col-xs-4"><a href="#">关于我们</a></li>
+            <li class="col-lg-2 col-lg-pull-3 col-md-2 col-sm-4 col-xs-4"><a href="#">设计团队</a></li>
+            <li class="col-lg-2 col-lg-pull-1 col-md-2 col-sm-4 col-xs-4"><a href="#">作品展示</a></li>
+            <li class="col-lg-2 col-lg-push-1 col-md-2 col-sm-4 col-xs-4"><a href="#">合作企业</a></li>
+            <li class="col-lg-2 col-lg-push-3 col-md-2 col-sm-4 col-xs-4"><a href="#">新闻资讯</a></li>
+            <li class="col-lg-2 col-lg-push-5 col-md-2 col-sm-4 col-xs-4"><a href="#">招聘信息</a></li>
+        </ul>
+        <div class="row">
+            <div class="col-lg-3 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 footerAbout">
+                <h5><span>德</span><span>诚</span><span>智</span><span>慧</span><span>家</span></h5>
+                <p>这里加点文案介绍这里加点文案介绍这里加点文案介绍这里加点文案介绍这里加 点文案介绍这里加点文案介绍这里加点文案介绍这里加点文案介绍</p>
+                <ul class="link clearfix">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 footerContact">
+                <h5>联系方式</h5>
+                <div class="line"></div>
+                <ul class="link">
+                    <li><img src="images/icon/address.svg"/>这里是地址这里是地址这里是地址这里是地址这里是地址</li>
+                    <li><img src="images/icon/tell.svg"/>
+                        <span>(</span><span>8</span><span>8</span><span>8</span><span>8</span><span>)</span>
+                        <span>0</span><span>2</span><span>7</span><span>-</span><span>8</span><span>8</span>
+                        <span>8</span><span>8</span><span>8</span><span>8</span><span>8</span>
+                    <li><img src="images/icon/message.svg"/>8888888@sina.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--bottom-->
+    <div class="container-fluid bottom">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text">
+                My website. All rights reserved, 2017, wuhan ICP for 8888888<br>
+                This page content for the web presentation data,the front desk page content can be modified
+                in the background.
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(function(){
+        var win_w=$(document).width();
+        var win_h=$(document).height();
+        var win_w_state;
+        var title_W;
+
+        if(win_w<=1024){
+            win_w_state=$(document).width();
+            title_W=0;
+        }else{
+            win_w_state=$(document).width()*0.414583;
+            title_W=60;
+        };
+
+        $('.sidebar-left').sliderBar({
+            open : false,
+            top :0,
+            width :win_w_state,
+            height :win_h,
+            theme : '#fff',
+            position : 'left',
+            bgColor:"#fff",
+            titleWidth:title_W,
+            titleHeight:win_h
+        });
+
+    });
+</script>
+</html>

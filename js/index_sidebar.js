@@ -14,23 +14,16 @@ $(function(){
     $("#nav .hasMenu").each(function(index){
         $(this).on("click",function(){
             $(this).find(".subMenu").slideToggle(300,"linear");
-            $(this).find(".subMenu").siblings(".subMenu").slideUp(300,"linear");
-            //$("#nav .subMenu").eq(index).slideDown(300,"linear").siblings().slideUp(300,"linear")
-
-            /*$(document).on("click",function(){
-                $("#nav .subMenu").slideUp(300,"linear");
-            });*/
+            //$(this).find(".subMenu").siblings(".subMenu").slideUp(300,"linear");
         });
     });
+
+
     //移动导航
     $("#NewNav-ctr").on("click",function(){
-        $("#mobile-nav").slideToggle("1000","swing");
+        $("#sidebar-left .title").trigger("click");
     });
-    $("#mobile-nav .nav .li-has").each(function(index){
-        $(this).on("click",function(){
-            $(this).toggleClass("currentMenu").siblings(".li-has").removeClass("currentMenu");
-            $("#mobile-nav .nav .navContent").eq(index).slideToggle(300).siblings(".navContent").slideUp(300);
-        });
+    $("#sidebar-left .body .search .close").on("click",function(){
+        $("#sidebar-left .title").trigger("click");
     });
-
 });

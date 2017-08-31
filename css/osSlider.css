@@ -12,7 +12,7 @@
     margin-top: -20px;
     background: url(./img/prev.png) 50% 50% no-repeat;
     transition: all .5s linear;*/
-    width:1.2962rem;height:1rem;line-height:1rem;z-index:30;
+    width:1.2962rem;height:1rem;line-height:1rem;z-index:20;
     position:absolute;top:50%;left:0.1296rem;background:url("../images/banner-bg2.png") no-repeat center;
 }
 .osSlider-main .slider-btn-prev:before{
@@ -42,7 +42,7 @@
     margin-top: -20px;
     background: url(./img/next.png) 50% 50% no-repeat;
     transition: all .5s linear;*/
-    width:1.2962rem;height:1rem;line-height:1rem;z-index:30;
+    width:1.2962rem;height:1rem;line-height:1rem;z-index:20;
     position:absolute;top:50%;/*right:7px;*/right:0.1296rem;background:url("../images/banner-bg.png") no-repeat center;
 }
 .osSlider-main .slider-btn-next:before{

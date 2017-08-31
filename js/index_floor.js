@@ -40,4 +40,38 @@ $(function(){
         },"1000","swing");
     });
 
+    //视频
+    var shTxt=$("#shipin .txt .txt-ctr");
+    var shTxt_li=$("#shipin .txt .txt-ctr li");
+    var shTxtCtrBtn=$("#shipin .txt .ctr-btn li");
+    var shPic=$("#shipin .pic img");
+    var num_shTxt=0;
+    var timer_shTxt=setInterval(sum,2000);
+    function sum(){
+        num_shTxt>2?num_shTxt=0:num_shTxt=num_shTxt+1;
+        shTxtCtrBtn.eq(num_shTxt).addClass("active").siblings().removeClass("active");
+        shTxt.eq(num_shTxt).fadeIn().siblings(".txt-ctr").fadeOut();
+    };
+    shTxt.eq(0).show();
+    shTxtCtrBtn.each(function(index){
+        $(this).on("click",function(){
+            clearInterval(timer_shTxt);
+            num_shTxt=index;
+            $(this).addClass("active").siblings().removeClass("active");
+            shTxt.eq(num_shTxt).fadeIn().siblings(".txt-ctr").fadeOut();
+        });
+    });
+    shTxt.on("mouseover",function(){
+        clearInterval(timer_shTxt);
+    });
+    shTxt.on("mouseout",function(){
+        timer_shTxt=setInterval(sum,2000);
+    });
+    shPic.eq(0).show();
+    shTxt_li.each(function(index){
+        $(this).on("mouseover",function(){
+            shPic.eq(index).fadeIn().siblings().fadeOut();
+        });
+    });
+
 });
