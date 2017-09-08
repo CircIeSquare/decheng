@@ -8,26 +8,27 @@
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <link type="text/css" rel="stylesheet" href="css/about.css"/>
 
-    <!--初始化移动端样式-->
     <script src="js/flexible_css.js"></script>
-    <!--设置dpr和rem-->
     <script src="js/flexible.js"></script>
-    <script src="js/jquery.min.1.8.3.js"></script>
+    <!--<script src="js/jquery.min.1.8.3.js"></script>-->
+    <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
     <script src="js/jquery.sliderBar.js"></script>
     <script src="js/index_sidebar.js"></script>
 </head>
 <body>
+    <!--head-->
+    <div class="container-fluid head" id="head"><img src="images/logo.png"/></div>
     <!--header-->
-    <div class="container-fluid header">
+    <div class="container-fluid header" id="header">
         <div class="row">
             <div class="col-lg-1 col-lg-push-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-5 logo">
                 <a href="#"><img src="images/logo.png"/></a>
             </div>
-            <div class="col-lg-6 col-lg-push-4 hidden-md hidden-sm hidden-xs nav" id="nav">
+            <!--<div class="col-lg-6 col-lg-push-4 hidden-md hidden-sm hidden-xs nav" id="nav">
                 <ul class="clearfix">
                     <li class="active"><a href="index.html">首页</a></li>
                     <li class="hasMenu">
-                        <a href="#">项目案例<span>ˇ</span></a>
+                        <a href="anli.html">项目案例<span>ˇ</span></a>
                         <ul class="subMenu">
                             <li><a href="#">现代风格</a></li>
                             <li><a href="#">简约风格</a></li>
@@ -62,7 +63,7 @@
                     </li>
                     <li><a href="about.html">联系我们</a></li>
                 </ul>
-            </div>
+            </div>-->
             <div class="hidden-lg visible-md visible-sm visible-xs col-md-1 col-md-offset-10  col-sm-1 col-sm-offset-10 col-xs-1 col-xs-offset-10 NewNav" id="NewNav">
                 <img src="images/icon/nav.svg" id="NewNav-ctr"/>
             </div>
@@ -94,8 +95,8 @@
             </div>
             <div class="sidebar-nav">
                 <div class="nav">
-                    <div class="li"><a href="#">首页</a></div>
-                    <div class="li li-has hasMenu"><a href="#">项目案例</a></div>
+                    <div class="li"><a href="index.html">首页</a></div>
+                    <div class="li li-has hasMenu"><a href="anli.html">项目案例</a></div>
                     <ul class="navContent">
                         <li><a href="#">现代风格</a></li>
                         <li><a href="#">简约风格</a></li>
@@ -114,14 +115,14 @@
                         <li><a href="#">老房改造</a></li>
                         <li><a href="#">室内设计</a></li>
                     </ul>
-                    <div class="li"><a href="#">产品手册</a></div>
+                    <div class="li"><a href="product.html">产品手册</a></div>
                     <div class="li li-has hasMenu"><a href="#">资讯中心</a></div>
                     <ul class="navContent">
                         <li><a href="#">装修大降价</a></li>
                         <li><a href="#">装修课堂</a></li>
                         <li><a href="#">装修问答</a></li>
                     </ul>
-                    <div class="li"><a href="#">联系我们</a></div>
+                    <div class="li"><a href="about.html">联系我们</a></div>
                 </div>
             </div>
             <div class="address">
@@ -346,7 +347,14 @@
             titleWidth:title_W,
             titleHeight:win_h
         });
-
+        //win_w<1200?$("#header").show():$("#head").show();
+        if(win_w<1200){
+            $("#header").show();
+            $("#head").hide();
+        }else{
+            $("#header").hide();
+            $("#head").show();
+        };
     });
 </script>
 </html>

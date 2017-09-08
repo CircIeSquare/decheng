@@ -14,10 +14,8 @@ $(function(){
     $("#nav .hasMenu").each(function(index){
         $(this).on("click",function(){
             $(this).find(".subMenu").slideToggle(300,"linear");
-            //$(this).find(".subMenu").siblings(".subMenu").slideUp(300,"linear");
         });
     });
-
 
     //移动导航
     $("#NewNav-ctr").on("click",function(){

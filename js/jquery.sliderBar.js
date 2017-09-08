@@ -43,7 +43,6 @@
 
     //执行方法
     var privateMethods = {
-
         //初始化obj的样式，obj下的body的样式
         initSliderBarCss : function(obj, opts){
             obj.css({
@@ -88,25 +87,19 @@
         },
 
         //左侧栏样式
-        showAtLeft : function(obj, opts){
-            //判断参数中是否设置展开,设置obj和title样式
+        showAtLeft : function(obj,opts){
             if(opts.open){
                 obj.css({left:'0px'});
-                //obj.find('.title').css('right','-25px').find('i').attr('class','fa fa-chevron-circle-left');
                 obj.find('.title').css('right',(-opts.titleWidth)+'px');
             }else{
                 obj.css({left:-opts.width+'px'});
-                //obj.find('.title').css('right','-25px').find('i').attr('class','fa fa-chevron-circle-right');
                 obj.find('.title').css('right',(-opts.titleWidth)+'px');
             }
-            //点击title滑动body
             obj.find('.title').click(function(){
                 if(obj.data('open')){
                     obj.css({"display":"none"}).animate({left:-opts.width+'px'},500);
-                    //$(this).find('i').attr('class','fa fa-chevron-circle-right');
                 }else{
                     obj.css({"display":"block !important"}).animate({left:'0px'}, 500);
-                    //$(this).find('i').attr('class','fa fa-chevron-circle-left');
                 }
                 obj.data('open',obj.data('open') == true ? false : true);
             });
@@ -115,23 +108,16 @@
         showAtRight : function(obj,opts){
             if(opts.open){
                 obj.css({right:'0px'});
-                //obj.find('.title').css('right',opts.width+20+'px').find('i').attr('class','fa fa-chevron-circle-right');
                 obj.find('.title').css('left',(-opts.titleWidth)+'px');
             }else{
-                //obj.css({right:'25px'});
                 obj.css({right:-opts.width+'px'});
-                //obj.find('.title').css('right', opts.width+20+'px').find('i').attr('class','fa fa-chevron-circle-left');
                 obj.find('.title').css('left',(-opts.titleWidth)+'px');
             }
-
             obj.find('.title').click(function(){
                 if(obj.data('open')){
-                    //obj.animate({right:-opts.width-22+'px'}, 500);
                     obj.css({"display":"none"}).animate({right:-opts.width+'px'}, 500);
-                    //$(this).find('i').attr('class','fa fa-chevron-circle-left');
                 }else{
                     obj.css({"display":"block !important"}).animate({right:'0px'}, 500);
-                    //$(this).find('i').attr('class','fa fa-chevron-circle-right');
                 }
                 obj.data('open',obj.data('open') == true ? false : true);
             });
