@@ -4,34 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1，user-scalable=no">
     <title>德诚智慧家</title>
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>-->
     <link type="text/css" rel="stylesheet" href="css/swiper.min.css"/>
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <link type="text/css" rel="stylesheet" href="css/index.css"/>
-    <link type="text/css" rel="stylesheet" href="css/animate.css"/>
-    <link type="text/css" rel="stylesheet" href="css/animation.css"/>
-    <!--百叶窗-->
-    <link type="text/css" rel="stylesheet" href="css/osSlider.css"/>
+    <link type="text/css" rel="stylesheet" href="css/animate.min.css"/>
 
-    <!--<script src="js/jquery.min.1.8.3.js"></script>-->
-    <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+    <!--<script src="js/flexible_css.js"></script>-->
+    <script src="js/flexible.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+        if(window.jQuery==undefined){
+            document.write('<script src="/js/jquery.min.1.8.3.js"><\/script>');
+        }
+    </script>
     <script src="js/swiper.min.js"></script>
-    <!--初始化移动端样式-->
-    <script src="js/flexible_css.js"></script>
-    <!--设置dpr和rem-->
-    <script src="js/flexible.js"></script>
     <!--百叶窗-->
-    <script src="js/osSlider.min.js"></script>
+    <script src="js/osSlider.js"></script>
     <!--右导航-->
     <script src="js/index_floor.js"></script>
     <!--左导航-->
     <script src="js/jquery.sliderBar.js"></script>
     <!--左导航-->
-    <script src="js/index_sidebar.js"></script>
+    <script src="js/sidebar.js"></script>
     <!--动画-->
     <script src="js/scroll_animation.js"></script>
-
-    <script src="jquery.light.box.js"></script>
 </head>
 <body>
     <!--header-->
@@ -46,10 +44,10 @@
                     <li class="hasMenu">
                         <a href="anli.html">项目案例<span>ˇ</span></a>
                         <ul class="subMenu">
-                            <li><a href="#">现代风格</a></li>
-                            <li><a href="#">简约风格</a></li>
-                            <li><a href="#">美式风格</a></li>
-                            <li><a href="#">欧式风格</a></li>
+                            <li><a href="xiangqing.html">现代风格</a></li>
+                            <li><a href="xiangqing.html">简约风格</a></li>
+                            <li><a href="xiangqing.html">美式风格</a></li>
+                            <li><a href="xiangqing.html">欧式风格</a></li>
                         </ul>
                     </li>
                     <li class="hasMenu">
@@ -86,26 +84,13 @@
         </div>
     </div>
     <!--banner-->
-    <!--<div class="container-fluid banner" id="banner">
-        <div class="swiper-container">
-            &lt;!&ndash; Swiper &ndash;&gt;
-            <div class="swiper-wrapper">
-                <div class="swiper-slide swiper-slide1"><a href="#" target="_blank"><img src="images/banner.png"/></a></div>
-                <div class="swiper-slide swiper-slide2"><a href="#" target="_blank"><img src="images/banner2.png"/></a></div>
-                <div class="swiper-slide swiper-slide3"><a href="#" target="_blank"><img src="images/banner3.png"/></a></div>
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
-    </div>-->
-    <div class="container-fluid slider banner" id="banner">
+    <div class="slider banner" id="banner">
         <ul class="slider-main">
             <li><img src="images/banner.png" alt=""></li>
             <li><img src="images/banner2.png" alt=""></li>
             <li><img src="images/banner3.png" alt=""></li>
         </ul>
     </div>
-
     <!--左导航-->
     <div class="sidebar sidebar-left visible-lg visible-md visible-xs visible-sm" id="sidebar-left">
         <div class="title">
@@ -278,7 +263,7 @@
                             <li class="clearfix">
                                 <div class="icon"><img src="images/shipin-ico1.png"/></div>
                                 <div class="info">
-                                    <h3><a href="#">XXXX灯光控制系统</a></h3>
+                                    <h3><a href="#"><span>XXXX</span><span>灯</span><span>光</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
                                     <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
                                         固定和保护光源所需的全部零件，以</p>
                                 </div>
@@ -286,7 +271,7 @@
                             <li class="clearfix">
                                 <div class="icon"><img src="images/shipin-ico2.png"/></div>
                                 <div class="info">
-                                    <h3><a href="#">XXXX家电控制系统</a></h3>
+                                    <h3><a href="#"><span>XXXX</span><span>家</span><span>电</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
                                     <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
                                         固定和保护光源所需的全部零件，以</p>
                                 </div>
@@ -294,7 +279,7 @@
                             <li class="clearfix">
                                 <div class="icon"><img src="images/shipin-ico3.png"/></div>
                                 <div class="info">
-                                    <h3><a href="#">XXXX安防监控系统</a></h3>
+                                    <h3><a href="#"><span>XXXX</span><span>安</span><span>防</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
                                     <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
                                         固定和保护光源所需的全部零件，以</p>
                                 </div>
@@ -304,7 +289,7 @@
                             <li class="clearfix">
                                 <div class="icon"><img src="images/shipin-ico2.png"/></div>
                                 <div class="info">
-                                    <h3><a href="#">XXXX家电控制系统</a></h3>
+                                    <h3><a href="#"><span>XXXX</span><span>家</span><span>电</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
                                     <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
                                         固定和保护光源所需的全部零件，以</p>
                                 </div>
@@ -312,7 +297,7 @@
                             <li class="clearfix">
                                 <div class="icon"><img src="images/shipin-ico3.png"/></div>
                                 <div class="info">
-                                    <h3><a href="#">XXXX安防监控系统</a></h3>
+                                    <h3><a href="#"><span>XXXX</span><span>安</span><span>防</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
                                     <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
                                         固定和保护光源所需的全部零件，以</p>
                                 </div>
@@ -320,7 +305,7 @@
                             <li class="clearfix">
                                 <div class="icon"><img src="images/shipin-ico1.png"/></div>
                                 <div class="info">
-                                    <h3><a href="#">XXXX灯光控制系统</a></h3>
+                                    <h3><a href="#"><span>XXXX</span><span>灯</span><span>光</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
                                     <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
                                         固定和保护光源所需的全部零件，以</p>
                                 </div>
@@ -330,7 +315,7 @@
                             <li class="clearfix">
                                 <div class="icon"><img src="images/shipin-ico3.png"/></div>
                                 <div class="info">
-                                    <h3><a href="#">XXXX安防监控系统</a></h3>
+                                    <h3><a href="#"><span>XXXX</span><span>安</span><span>防</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
                                     <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
                                         固定和保护光源所需的全部零件，以</p>
                                 </div>
@@ -338,7 +323,7 @@
                             <li class="clearfix">
                                 <div class="icon"><img src="images/shipin-ico2.png"/></div>
                                 <div class="info">
-                                    <h3><a href="#">XXXX家电控制系统</a></h3>
+                                    <h3><a href="#"><span>XXXX</span><span>家</span><span>电</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
                                     <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
                                         固定和保护光源所需的全部零件，以</p>
                                 </div>
@@ -346,7 +331,7 @@
                             <li class="clearfix">
                                 <div class="icon"><img src="images/shipin-ico1.png"/></div>
                                 <div class="info">
-                                    <h3><a href="#">XXXX灯光控制系统</a></h3>
+                                    <h3><a href="#"><span>XXXX</span><span>灯</span><span>光</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
                                     <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
                                         固定和保护光源所需的全部零件，以</p>
                                 </div>
@@ -505,8 +490,8 @@
                         <p>这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容 这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容 这里是内容</p>
                     </div>
                 </div>
-                <div class="swiper-button-prev">〈</div>
-                <div class="swiper-button-next">〉</div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
                 <div class="swiper-pagination"></div>
             </div>
         </div>
@@ -523,15 +508,23 @@
     </div>
     <!--footer-->
     <div class="container-fluid footer">
-            <ul class="row footerNav">
+        <ul class="row footerNav">
                 <li class="col-lg-2 col-lg-pull-5 col-md-2 col-sm-4 col-xs-4"><a href="#">关于我们</a></li>
                 <li class="col-lg-2 col-lg-pull-3 col-md-2 col-sm-4 col-xs-4"><a href="#">设计团队</a></li>
                 <li class="col-lg-2 col-lg-pull-1 col-md-2 col-sm-4 col-xs-4"><a href="#">作品展示</a></li>
                 <li class="col-lg-2 col-lg-push-1 col-md-2 col-sm-4 col-xs-4"><a href="#">合作企业</a></li>
                 <li class="col-lg-2 col-lg-push-3 col-md-2 col-sm-4 col-xs-4"><a href="#">新闻资讯</a></li>
                 <li class="col-lg-2 col-lg-push-5 col-md-2 col-sm-4 col-xs-4"><a href="#">招聘信息</a></li>
-            </ul>
-        <div class="row">
+        </ul>
+        <!--<ul class="footerNav">
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">设计团队</a></li>
+            <li><a href="#">作品展示</a></li>
+            <li><a href="#">合作企业</a></li>
+            <li><a href="#">新闻资讯</a></li>
+            <li><a href="#">招聘信息</a></li>
+        </ul>-->
+        <div class="row footerInfo">
             <div class="col-lg-3 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 footerAbout">
                 <h5><span>德</span><span>诚</span><span>智</span><span>慧</span><span>家</span></h5>
                 <p>这里加点文案介绍这里加点文案介绍这里加点文案介绍这里加点文案介绍这里加 点文案介绍这里加点文案介绍这里加点文案介绍这里加点文案介绍</p>
@@ -567,24 +560,17 @@
         </div>
     </div>
 
-
-    <!--lightbox-->
-    <div class="lightbox-container">
-        <div class="lightbox">
-            <span class="closeBtn"></span>
-        </div>
-    </div>
 </body>
 
 <script type="text/javascript">
-    var slider = new osSlider({//开始创建效果
-        pNode:'.slider', //容器的选择器 必填
-        cNode:'.slider-main li', //轮播体的选择器 必填
-        speed:3000, //速度 默认3000 可不填写
-        autoPlay:true //是否自动播放 默认true 可不填写
-    });
-
     $(function(){
+        var slider = new osSlider({//开始创建效果
+            pNode:'.slider', //容器的选择器 必填
+            cNode:'.slider-main li', //轮播体的选择器 必填
+            speed:3000, //速度 默认3000 可不填写
+            autoPlay:true //是否自动播放 默认true 可不填写
+        });
+
         //banner文字清空
         $(".slider-btn-prev").text("");
         $(".slider-btn-next").text("");
@@ -597,23 +583,31 @@
         slidesPerView: 3,
         spaceBetween: 50,
         breakpoints: {
-            1440: {
-                slidesPerView: 3,
+            1440:{
+                slidesPerView:3,
                 spaceBetween: 40
             },
-            1024: {
+            1366:{
+                slidesPerView:3,
+                spaceBetween: 40
+            },
+            1280:{
+                slidesPerView:2,
+                spaceBetween: 40
+            },
+            1024:{
                 slidesPerView: 2,
                 spaceBetween: 40
             },
-            768: {
+            768:{
                 slidesPerView: 2,
                 spaceBetween: 30
             },
-            640: {
+            640:{
                 slidesPerView: 1,
                 spaceBetween: 20
             },
-            320: {
+            320:{
                 slidesPerView: 1,
                 spaceBetween: 10
             }

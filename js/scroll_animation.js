@@ -16,7 +16,7 @@ $(function(){
         }/*else{
          $(ele).removeClass(clsName);
          }*/
-    }
+    };
 
     //获取前一次的滚动高度（这里是第一次）
     var firstTop=$(window).scrollTop();

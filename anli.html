@@ -2,19 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>装修案例</title>
+    <title>用户案例</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1，user-scalable=no">
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>-->
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <link type="text/css" rel="stylesheet" href="css/anli.css"/>
+    <!--<script src="js/flexible_css.js"></script>-->
 
-    <script src="js/flexible_css.js"></script>
-    <script src="js/flexible.js"></script>
-    <script src="js/jquery.min.1.8.3.js"></script>
-    <!--<script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>-->
+
+    <script src="js/flexible.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+        if(window.jQuery==undefined){
+            document.write('<script src="/js/jquery.min.1.8.3.js"><\/script>');
+        }
+    </script>
     <script src="js/jquery.sliderBar.js"></script>
-    <script src="js/index_sidebar.js"></script>
-    <script src="js/anli.js"></script>
+    <script src="js/sidebar.js"></script>
 </head>
 <body>
     <!--head-->
@@ -29,7 +34,7 @@
                 <ul class="clearfix">
                     <li class="active"><a href="index.html">首页</a></li>
                     <li class="hasMenu">
-                        <a href="anli.html">项目案例<span>ˇ</span></a>
+                        <a href="xiangqing.html">项目案例<span>ˇ</span></a>
                         <ul class="subMenu">
                             <li><a href="#">现代风格</a></li>
                             <li><a href="#">简约风格</a></li>
@@ -68,12 +73,6 @@
             <div class="hidden-lg visible-md visible-sm visible-xs col-md-1 col-md-offset-10  col-sm-1 col-sm-offset-10 col-xs-1 col-xs-offset-10 NewNav" id="NewNav">
                 <img src="images/icon/nav.svg" id="NewNav-ctr"/>
             </div>
-        </div>
-    </div>
-    <!--banner-->
-    <div class="container-fluid banner">
-        <div class="row">
-            <!--<img src="images/anli-banner.jpg"/>-->
         </div>
     </div>
     <!--左导航-->
@@ -135,61 +134,156 @@
             </div>
         </div>
     </div>
-    <!--time-->
-    <div class="container-fluid time" id="time">
-        <div class="time-line">
-            <ul>
-                <li class="zao">8:00</li>
-                <li class="zhong">14:00</li>
-                <li class="wan">22:00</li>
-            </ul>
-        </div>
-        <div class="content-wrap clearfix">
-            <div class="content content1 clearfix">
-                <div class="img clearfix">
-                   <!-- <img src="images/anli-time-bg1.jpg"/>-->
-                </div>
-                <div class="info">
-                    <div class="tit clearfix">
-                        <span class="span1">8:00</span>
-                        <img src="images/anli-time-pic1-1.png"/>
-                        <span class="span2">舒适唤醒</span>
-                    </div>
-                    <img src="images/anli-time-pic1-2.png"/>
-                    <p>每天唤醒你的应该是初升的暖阳，卧室的电动窗帘自动拉开，
-                        厨房的面包机和咖啡机已经煮好，传来阵阵飘香。</p>
-                </div>
+    <!--banner-->
+    <div class="banner">
+        <img src="images/anlilist-banner_03.jpg"/>
+    </div>
+    <!--content-->
+    <div class="content">
+        <div class="content-inner">
+            <!--content-title-->
+            <div class="content-title clearfix">
+                <ul class="filter">
+                    <li>最新<img src="images/anliList-img-jiantou.png"/></li>
+                    <li>最热<img src="images/anliList-img-jiantou.png"/></li>
+                </ul>
+                <p>已为您推荐<span>22</span>套案例</p>
             </div>
-            <div class="content content2 clearfix">
-                <div class="img clearfix">
-                    <!-- <img src="images/anli-time-bg1.jpg"/>-->
-                </div>
-                <div class="info">
-                    <div class="tit clearfix">
-                        <span>14:00</span>
-                        <img src="images/anli-time-pic2-1.png"/>
-                        <span class="span2">安防模式</span>
-                    </div>
-                    <img src="images/anli-time-pic2-2.png"/>
-                    <p>离家之后自动开启布防模式：门窗磁传感器、智能摄像机等 全部运作，让你随时随地掌握家中动态。</p>
-                </div>
+            <!--content-->
+            <div class="content-body">
+                <ul class="clearfix">
+                    <li>
+                        <div class="img">
+                            <img src="images/anliList-item-pic_03.jpg"/>
+                        </div>
+                        <div class="info">
+                            <h3>简约小清新色彩搭配</h3>
+                            <p>10万|两居|98㎡</p>
+                            <a href="xiangqing.html" class="yuyue">预约设计</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="images/anliList-item-pic_05.jpg"/>
+                        </div>
+                        <div class="info">
+                            <h3>简约小清新色彩搭配</h3>
+                            <p>10万|两居|98㎡</p>
+                            <a href="xiangqing.html" class="yuyue">预约设计</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="images/anliList-item-pic_08.jpg"/>
+                        </div>
+                        <div class="info">
+                            <h3>简约小清新色彩搭配</h3>
+                            <p>10万|两居|98㎡</p>
+                            <a href="xiangqing.html" class="yuyue">预约设计</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="images/anliList-item-pic_03.jpg"/>
+                        </div>
+                        <div class="info">
+                            <h3>简约小清新色彩搭配</h3>
+                            <p>10万|两居|98㎡</p>
+                            <a href="xiangqing.html" class="yuyue">预约设计</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="images/anliList-item-pic_05.jpg"/>
+                        </div>
+                        <div class="info">
+                            <h3>简约小清新色彩搭配</h3>
+                            <p>10万|两居|98㎡</p>
+                            <a href="xiangqing.html" class="yuyue">预约设计</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="images/anliList-item-pic_08.jpg"/>
+                        </div>
+                        <div class="info">
+                            <h3>简约小清新色彩搭配</h3>
+                            <p>10万|两居|98㎡</p>
+                            <a href="xiangqing.html" class="yuyue">预约设计</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="images/anliList-item-pic_03.jpg"/>
+                        </div>
+                        <div class="info">
+                            <h3>简约小清新色彩搭配</h3>
+                            <p>10万|两居|98㎡</p>
+                            <a href="xiangqing.html" class="yuyue">预约设计</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="images/anliList-item-pic_05.jpg"/>
+                        </div>
+                        <div class="info">
+                            <h3>简约小清新色彩搭配</h3>
+                            <p>10万|两居|98㎡</p>
+                            <a href="xiangqing.html" class="yuyue">预约设计</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="images/anliList-item-pic_08.jpg"/>
+                        </div>
+                        <div class="info">
+                            <h3>简约小清新色彩搭配</h3>
+                            <p>10万|两居|98㎡</p>
+                            <a href="xiangqing.html" class="yuyue">预约设计</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="images/anliList-item-pic_03.jpg"/>
+                        </div>
+                        <div class="info">
+                            <h3>简约小清新色彩搭配</h3>
+                            <p>10万|两居|98㎡</p>
+                            <a href="xiangqing.html" class="yuyue">预约设计</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="images/anliList-item-pic_05.jpg"/>
+                        </div>
+                        <div class="info">
+                            <h3>简约小清新色彩搭配</h3>
+                            <p>10万|两居|98㎡</p>
+                            <a href="xiangqing.html" class="yuyue">预约设计</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="images/anliList-item-pic_08.jpg"/>
+                        </div>
+                        <div class="info">
+                            <h3>简约小清新色彩搭配</h3>
+                            <p>10万|两居|98㎡</p>
+                            <a href="xiangqing.html" class="yuyue">预约设计</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="content content3 clearfix">
-                <div class="img clearfix">
-                    <!-- <img src="images/anli-time-bg1.jpg"/>-->
-                </div>
-                <div class="info">
-                    <div class="tit clearfix">
-                        <span>22:00</span>
-                        <img src="images/anli-time-pic3-1.png"/>
-                        <span class="span2">睡眠模式</span>
-                    </div>
-                    <img src="images/anli-time-pic3-2.png"/>
-                    <p>无需逐个关灯，轻触床头的“睡眠模式”情景面板，所有 灯光、家电将关闭，安心入睡如此简单。</p>
-                </div>
+            <div class="pageCtrBtn">
+                <ul>
+                    <li class="active">1</li>
+                    <li>2</li>
+                    <li class="next">下一页</li>
+                </ul>
             </div>
         </div>
     </div>
+
     <!--友链-->
     <div class="friendlyLink visible-lg hidden-md hidden-md hidden-sm hidden-xs">
         <ul>
@@ -244,8 +338,14 @@
             </div>
         </div>
     </div>
-</body>
 
+    <!--[if IE]><!-->
+    <style type="text/css">
+        /*.content .content-body ul li .info .yuyue{!*background:#0186ef;*!background:url("images/anliList-img-bg1.png") no-repeat;background-size:cover;}
+        .content .pageCtrBtn ul li:hover,.content .pageCtrBtn ul li.active{background:url("images/anliList-img-bg2.png") no-repeat;background-size:cover;}*/
+    </style>
+    <!--[endif]-->
+</body>
 <script>
     $(function(){
         var win_w=$(document).width();
@@ -253,7 +353,7 @@
         var win_w_state;
         var title_W;
 
-        if(win_w<=1024){
+        if(win_w<1024){
             win_w_state=$(document).width();
             title_W=0;
         }else{
@@ -272,10 +372,7 @@
             titleWidth:title_W,
             titleHeight:win_h
         });
-        $(window).resize=function(){
-            alert(11111);
-        };
-        //win_w<1200?$("#header").show():$("#head").show();
+
         if(win_w<1200){
             $("#header").show();
             $("#head").hide();
@@ -283,6 +380,8 @@
             $("#header").hide();
             $("#head").show();
         };
+
     });
 </script>
+
 </html>

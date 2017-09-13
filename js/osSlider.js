@@ -20,7 +20,10 @@ function osSlider(objs) {
     if (!that.objs.autoPlay) {//添加默认自动播放
         that.objs.autoPlay = true;
     }
-    that.init = function() {//轮播的初始化
+
+    /**轮播的初始化*/
+    //初始化轮播容器、上下控制按钮、高亮控制按钮
+    that.init = function() {
         that.pNode.addClass('osSlider-main');
         that.pNode.css({//轮播容器的大小控制 启用bfc模式
             'width':that.width,
@@ -39,9 +42,9 @@ function osSlider(objs) {
             that.toggleMove('next');
         });
         //为高亮导航创建节点
-        var $navParent = $('<ul class="slider-nav"></ul>');
+        /*var $navParent = $('<ul class="slider-nav"></ul>');
         $navParent.appendTo(that.pNode);
-        that.cNodes.each(function(index, el) {//采用遍历，添加前后顺序
+        that.cNodes.each(function(index,el) {//采用遍历，添加前后顺序
             if (index==0) {//让第一个显示在前面 同时为每个轮播体创建对应nav点
                 var indexNum = 20;
                 $navParent.append('<li class="active">'+(index+1)+'</li>');
@@ -58,29 +61,29 @@ function osSlider(objs) {
                 'left':'0px',
                 'z-index':indexNum
             });
-        });
+        });*/
         //为高亮导航节点绑定事件
-        $(that.pNode).find('.slider-nav li').each(function(index, el) {
+        /*$(that.pNode).find('.slider-nav li').each(function(index, el) {
             $(this).bind('click',function(){
                 that.toggleMove(false,index);
             });
-        });
+        });*/
         //判断是否自动播放
         if (that.objs.autoPlay) {
             that.moveTime();
-        }
+        };
     }
     /**
      * 切换轮播后 轮播导航的高亮
      * @param {Number} tid
      */
-    that.sliderNavToggle = function(tid,nid) {
+    /*that.sliderNavToggle = function(tid,nid) {
         $('.slider-nav li').each(function(index, el) {
             if (index==tid||index==nid) {
                 $(this).toggleClass('active');
             }
         });
-    }
+    }*/
     /**
      * 切换效果指令函数 避免BUG
      * @param {String} command 'prev'|'next'
@@ -100,7 +103,7 @@ function osSlider(objs) {
             }
             if (!tid) {
                 if(tid==0) {
-                } else if (command=='prev') {
+                } else if (command=='prev'){
                     tid = that.nowNodeKey-1;
                     if (that.nowNodeKey==0) {
                         tid = that.cNodeNums-1;
@@ -130,41 +133,50 @@ function osSlider(objs) {
         nid = that.nowNodeKey;
         that.moveFlag = false;
         that.speedNum = 0;
-        that.sliderNavToggle(nid,tid);
+        //that.sliderNavToggle(nid,tid);
         switch (mid){
-            case 0:that.gridTop(tid,0);break;
-            case 1:that.gridTop(tid,1);break;
-            case 2:that.gridTop(tid,2);break;
+            /*case 0:that.gridTop(tid,0);break;*/
+            /*case 1:that.gridTop(tid,1);break;*/
+            /*case 2:that.gridTop(tid,2);break;
             case 3:that.gridLeft(tid,0);break;
             case 4:that.gridLeft(tid,1);break;
             case 5:that.gridLeft(tid,2);break;
-            case 6:that.cellToggle(tid);break;
-            default:that.gridTop(tid);break;
-        }
-    }
+            case 6:that.cellToggle(tid);break;*/
+            /*default:that.gridTop(tid,1);break;*/
+            default:
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:that.gridTop(tid,1);break;
+        };
+    };
+
     /**栅格上下切换*/
     that.gridTop = function(tid,showNum) {
         that.cNodes[tid].style.zIndex = 19;//让下个节点准备好
         var $backHTML = that.cNodes[that.nowNodeKey].innerHTML;//备份当前节点的内容
         that.cNodes[that.nowNodeKey].innerHTML = '';//清空节点，方便使用
-        for (var i = 0; i < 12; i++) {//利用循环 创建出栅格节点
+        for (var i = 0; i < 10; i++) {//利用循环 创建出栅格节点
             var $cvNode = $('<div class="cvNode"></div>');
             $(that.cNodes[that.nowNodeKey]).append($cvNode);
             $cvNode.html($backHTML);
             $cvNode.css({//为每个栅格节点添加css样式
                 'position':'absolute',
-                'width':that.width/12+'px',
+                'width':that.width/10+'px',
                 'height':that.height+'px',
                 'zIndex':20,
                 'overflow':'hidden',
-                'left':that.width/12*i+'px',
+                'left':that.width/10*i+'px',
                 'top':'0'
             });
             $cvNode.find('*').first().css({
                 'display':'block',
-                'margin-left':that.width/-12*i+'px'
+                'margin-left':that.width/-10*i+'px'
             });
-        }
+        };
 
         //分配对应效果
         switch (showNum) {
@@ -195,10 +207,10 @@ function osSlider(objs) {
                 if (showNum==1) {
                     //添加动画过渡效果 下降
                     $(that.cNodes[that.nowNodeKey]).find('.cvNode').each(function(index,el){
-                        var sp = 80*index;
+                        var sp = 100*index;
                         $(this).animate({
                             top: $(this).height() + 'px'
-                        },500+sp);
+                        },500+sp,"linear");
                     });
                 } else {
                     //添加动画过渡效果 上升
@@ -206,9 +218,9 @@ function osSlider(objs) {
                         var sp = 80*index;
                         $(this).animate({
                             top: $(this).height()*-1 + 'px'
-                        },500+sp);
+                        },500+sp,"linear");
                     });
-                }
+                };
                 setTimeout(function(){//动画结束后开始恢复原有状态
                     that.moveFlag = true;
                     that.cNodes[tid].style.zIndex = 20;
@@ -217,11 +229,10 @@ function osSlider(objs) {
                     that.nowNodeKey = tid;//得到新的当前节点key
                 },1380);
                 break;
-        }
-    }
-
-    /** 栅格左右张切换*/
-    that.gridLeft = function(tid,showNum) {
+        };
+    };
+    /**栅格左右切换*/
+    /*that.gridLeft = function(tid,showNum) {
         that.cNodes[tid].style.zIndex = 19;//让下个节点准备好
         var $backHTML = that.cNodes[that.nowNodeKey].innerHTML;//备份当前节点的内容
         that.cNodes[that.nowNodeKey].innerHTML = '';//清空节点，方便使用
@@ -286,10 +297,9 @@ function osSlider(objs) {
             $(that.cNodes[that.nowNodeKey]).html($backHTML);//清除动画产生的多余内容
             that.nowNodeKey = tid;//得到新的当前节点key
         },1500);
-    }
-
-    //格子切换效果
-    that.cellToggle = function(tid) {
+    }*/
+    /**格子切换效果*/
+    /*that.cellToggle = function(tid){
         that.cNodes[tid].style.zIndex = 19;//让下个节点准备好
         var $backHTML = that.cNodes[that.nowNodeKey].innerHTML;//备份当前节点的内容
         that.cNodes[that.nowNodeKey].innerHTML = '';//清空节点，方便使用
@@ -334,7 +344,7 @@ function osSlider(objs) {
                 if (index%1==0) {
                     $(this).find('*').first().animate({
                         "margin-left": $(this).width() + 'px'
-                    }, 500);
+                    },500);
                 }
             });
         },600);
@@ -345,22 +355,22 @@ function osSlider(objs) {
             $(that.cNodes[that.nowNodeKey]).html($backHTML);//清除动画产生的多余内容
             that.nowNodeKey = tid;//得到新的当前节点key
         },1100);
-    }
+    }*/
 
     //自动播放控制方法
-    that.moveTime = function() {
+    that.moveTime = function(){
         setTimeout(function(){
-            if (that.moveFlag) {
+            if (that.moveFlag){
                 that.speedNum++;
                 if (that.speedNum>=that.objs.speed/100) {
                     that.speedNum = 0;
                     that.toggleMove('next');
-                }
+                };
             }
             if (!that.isPause) {
                 setTimeout(arguments.callee,100);
             }
         },100);
-    }
+    };
     that.init();
 }

@@ -1,0 +1,105 @@
+body{overflow-x:hidden;}
+
+/*header*/
+.header{display:none;}
+
+/*banner*/
+.banner{width:93.75%;margin:1.666rem auto 0;/*height:749px;*/height:13.8703rem;background:url("../images/anli-banner.jpg") no-repeat center;background-size:cover;}
+.banner img{width:100%;height:100%;}
+
+/*time*/
+.time{width:93.75%;margin:0 auto;position:relative;padding:0;height:20.3888rem;
+    /*height:20.3888rem;background:url("../images/anli-time-bg1.jpg") no-repeat center;background-size:cover;*/
+}
+.time .time-line{/*width:135px;height:933px;*//*margin:86px 0 0 3px;*/background:url("../images/anli-timeLine0.png") no-repeat left top;
+    width:2.5rem;height:17.2777rem;position:absolute;/*top:86px;left:3px;*/top:1.592rem;left:0.0555rem;z-index:30;}
+.time .time-line ul{width:87px;height:100%;float:right;text-align:center;}
+.time .time-line ul li{/*height:28px;line-height:28px;*/color:#e1dcda;font-family:"HelveticaNeueCE";/*font-size:32px;*/
+    height:0.5185rem;line-height:0.5185rem;font-size:0.59259rem;cursor:pointer;
+}
+.time .time-line ul .zao{/*margin-top:137px;*/margin-top:2.53703rem;}
+.time .time-line ul .zhong{/*margin-top:285px;*/margin-top:5.27777rem;}
+.time .time-line ul .wan{/*margin-top:292px;*/margin-top:5.407rem;}
+
+.time .time-line ul li:hover,.time .time-line ul li.active{color:#ffffff;}
+
+
+
+.time .content-wrap{width:100%;position:relative;height:20.3888rem;}
+.time .content-wrap .content{width:100%;height:20.3888rem;position:absolute;top:0;left:0;display:none;background:url("../images/anli-time-bg1.jpg") no-repeat center;background-size:cover;}
+
+.time .content-wrap .content2{background:url("../images/anli-time-bg2.jpg") no-repeat center;background-size:cover;}
+.time .content-wrap .content3{background:url("../images/anli-time-bg3.jpg") no-repeat center;background-size:cover;}
+
+
+.time .content .img{width:100%;position:absolute;}
+.time .content .img img{width:100%;height:100%;/*height:20.3888rem;*/}
+
+.time .content .info{width:100%;text-align:center;}
+.time .content .info .tit{/*padding-top:342px;*/padding-top:6.333rem;/*height:3.703rem;*/line-height:3.703rem;box-sizing:content-box;
+/*width:746px;*//*width:13.8148rem;*//*width:43.444%;margin:0 auto;*/
+}
+.time .content .info span{color:#434242;font-family:"HelveticaNeueCE";/*font-size:101px;*/font-size:1.87037rem;}
+
+.time .content .info .span2{font-family:"SourceHanSansCN";/*font-size:76px;*/font-size:1.407rem;}
+.time .content .info img{/*width:405px;height:95px;*/width:7.5rem;height:1.759259rem;/*padding-top:52px;*/padding-top:0.96296rem;box-sizing:content-box;}
+.time .content2 .info img{/*width:615px;height:81px;*/width:11.3888rem;height:1.5rem;}
+.time .content3 .info img{/*width:322px;height:75px;*/width:5.96296rem;height:1.3888rem;}
+
+.time .content1 .info .span1{margin-right:-0.8rem;}
+.time .content1 .info .span2{margin-right:-1.6rem;}
+.time .content .info .tit img{width:3.703rem;height:3.703rem;line-height:0;padding:0;margin:-1.8rem 0.8rem 0;}
+.time .content1 .info .tit img{margin-left:1.9rem;}
+
+.time .content .info p{/*width:685px;line-height:40px;width:40.05%;*/width:10rem;line-height:0.74rem;/*margin:31px auto 0;*/
+    margin:0.57407rem auto 0;/*font-size:26px;*/font-size:0.48148rem;color:#000;
+}
+.time .content3 .info span,.time .content3 .info p{color:#fff;}
+
+/*media*/
+@media screen and (min-width:1920px){
+
+}
+@media screen and (max-width:1600px){
+
+}
+@media screen and (max-width:1440px){
+
+}
+@media screen and (max-width:1366px){
+
+}
+@media screen and (max-width:1280px) {
+
+}
+@media screen and (max-width:1200px){
+
+}
+@media screen and (max-width:1024px){
+    .time{padding:0;width:100% !important;}
+}
+@media screen and (max-width:992px){
+    .time .time-line{display:none;}
+    .time .content .info .tit{padding-top:3.333rem;}
+   /*.time .content .info .tit .span1,.time .content .info .tit .span2{width:50%;margin:0 auto;text-align:center;}
+    .time .content .info .tit img{};*/
+}
+@media screen and (max-width:900px){
+    .time .content .info .tit{padding-top:1.333rem;}
+    /*.time .content .info .tit span{line-height:1.703rem;}*/
+    .time .content .info .tit .span1{width:60%;margin:0 auto;text-align:center;display:block;}
+    .time .content1 .info .tit img{margin-left:auto;margin-right:auto;}
+    .time .content .info .tit .span2{width:60%;margin:0 auto;text-align:center;display:block;line-height:2.703rem;}
+}
+
+@media screen and (max-width:640px){
+
+}
+@media screen and (max-width:480px){
+
+}
+@media screen and (max-width:320px){
+
+}
+
+
