@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>客户列表</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/home.css"/>
+    <link rel="stylesheet" type="text/css" href="css/user.css"/>
+    <link rel="stylesheet" type="text/css" href="css/userList.css"/>
+    <script src="js/jquery.min.1.8.3.js"></script>
+    <script src="js/jquery.rollbar.js"></script>
+    <script src="js/jquery.mousewheel.min.3.1.13.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/modal.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header clearfix">
+        <div class="inner clearfix">
+            <div class="logo">
+                <h1>德诚<span>管理后台</span></h1>
+            </div>
+            <ul class="menu">
+                <li>admin</li>
+                <li>个人设置</li>
+                <li>退出系统</li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrap clearfix" id="wrap">
+        <div class="sidebar" id="sidebar">
+            <div class="nav">
+                <div class="menuTop">管理首页</div>
+                <div class="hasMenu">会员管理<span></span></div>
+                <ul class="navContent">
+                    <li>会员一</li>
+                    <li>会员二</li>
+                    <li>会员三</li>
+                </ul>
+                <div class="hasMenu">互动管理<span></span></div>
+                <ul class="navContent">
+                    <li>互动一</li>
+                    <li>互动二</li>
+                    <li>互动三</li>
+                </ul>
+                <div class="hasMenu">产品管理<span></span></div>
+                <ul class="navContent">
+                    <li>产品一</li>
+                    <li>产品二</li>
+                    <li>产品三</li>
+                </ul>
+                <div class="hasMenu">文章管理<span></span></div>
+                <ul class="navContent">
+                    <li>文章一</li>
+                    <li>文章二</li>
+                    <li>文章三</li>
+                </ul>
+                <div class="hasMenu">活动管理<span></span></div>
+                <ul class="navContent">
+                    <li>活动一</li>
+                    <li>活动二</li>
+                    <li>活动三</li>
+                </ul>
+                <div class="hasMenu">门店管理<span></span></div>
+                <ul class="navContent">
+                    <li>门店一</li>
+                    <li>门店二</li>
+                    <li>门店三</li>
+                </ul>
+                <div class="hasMenu">客服管理<span></span></div>
+                <ul class="navContent">
+                    <li>客服一</li>
+                    <li>客服二</li>
+                    <li>客服三</li>
+                </ul>
+                <div class="hasMenu">系统管理<span></span></div>
+                <ul class="navContent">
+                    <li>系统一</li>
+                    <li>系统二</li>
+                    <li>系统三</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main" id="main">
+            <div class="main-title"><h2>会员列表</h2></div>
+            <div class="main-content">
+                <div class="main-inner">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>头像</th>
+                                <th>昵称</th>
+                                <th>性别</th>
+                                <th>地区</th>
+                                <th>关注时间</th>
+                                <th>分组</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1004019</td>
+                                <td><img src="images/user-pic.png" title="点击查看高清头像" class="modal-open"/></td>
+                                <td></td>
+                                <td>男</td>
+                                <td>武汉</td>
+                                <td>2017-10-07 17:00:00</td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <div class="select-title">未分组</div>
+                                        <ul class="clearfix">
+                                            <li>选项一</li>
+                                            <li>选项二</li>
+                                            <li>选项三</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><span>更新资料</span></td>
+                            </tr>
+                            <tr class="tr2">
+                                <td>1004019</td>
+                                <td></td>
+                                <td></td>
+                                <td>男</td>
+                                <td>武汉</td>
+                                <td>2017-10-07 17:00:00</td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <div class="select-title">未分组</div>
+                                        <ul class="clearfix">
+                                            <li>选项一</li>
+                                            <li>选项二</li>
+                                            <li>选项三</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><span>更新资料</span></td>
+                            </tr>
+                            <tr>
+                                <td>1004019</td>
+                                <td></td>
+                                <td></td>
+                                <td>男</td>
+                                <td>武汉</td>
+                                <td>2017-10-07 17:00:00</td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <div class="select-title">未分组</div>
+                                        <ul class="clearfix">
+                                            <li>选项一</li>
+                                            <li>选项二</li>
+                                            <li>选项三</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><span>更新资料</span></td>
+                            </tr>
+                            <tr class="tr2">
+                                <td>1004019</td>
+                                <td><img src="images/user-pic.png" title="点击查看高清头像" class="modal-open"/></td>
+                                <td></td>
+                                <td>男</td>
+                                <td>武汉</td>
+                                <td>2017-10-07 17:00:00</td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <div class="select-title">未分组</div>
+                                        <ul class="clearfix">
+                                            <li>选项一</li>
+                                            <li>选项二</li>
+                                            <li>选项三</li>
+                                            <li>选项四</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><span>更新资料</span></td>
+                            </tr>
+                            <tr>
+                                <td>1004019</td>
+                                <td></td>
+                                <td></td>
+                                <td>男</td>
+                                <td>武汉</td>
+                                <td>2017-10-07 17:00:00</td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <div class="select-title">未分组</div>
+                                        <ul class="clearfix">
+                                            <li>选项一</li>
+                                            <li>选项二</li>
+                                            <li>选项三</li>
+                                            <li>选项四</li>
+                                            <li>选项五</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><span>更新资料</span></td>
+                            </tr>
+                            <tr>
+                                <td>1004019</td>
+                                <td><img src="images/user-pic.png" title="点击查看高清头像" class="modal-open"/></td>
+                                <td></td>
+                                <td>男</td>
+                                <td>武汉</td>
+                                <td>2017-10-07 17:00:00</td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <div class="select-title">未分组</div>
+                                        <ul class="clearfix">
+                                            <li>选项一</li>
+                                            <li>选项二</li>
+                                            <li>选项三</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><span>更新资料</span></td>
+                            </tr>
+                            <tr class="tr2">
+                                <td>1004019</td>
+                                <td></td>
+                                <td></td>
+                                <td>男</td>
+                                <td>武汉</td>
+                                <td>2017-10-07 17:00:00</td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <div class="select-title">未分组</div>
+                                        <ul class="clearfix">
+                                            <li>选项一</li>
+                                            <li>选项二</li>
+                                            <li>选项三</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><span>更新资料</span></td>
+                            </tr>
+                            <tr>
+                                <td>1004019</td>
+                                <td></td>
+                                <td></td>
+                                <td>男</td>
+                                <td>武汉</td>
+                                <td>2017-10-07 17:00:00</td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <div class="select-title">未分组</div>
+                                        <ul class="clearfix">
+                                            <li>选项一</li>
+                                            <li>选项二</li>
+                                            <li>选项三</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><span>更新资料</span></td>
+                            </tr>
+                            <tr class="tr2">
+                                <td>1004019</td>
+                                <td><img src="images/user-pic.png" title="点击查看高清头像" class="modal-open"/></td>
+                                <td></td>
+                                <td>男</td>
+                                <td>武汉</td>
+                                <td>2017-10-07 17:00:00</td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <div class="select-title">未分组</div>
+                                        <ul class="clearfix">
+                                            <li>选项一</li>
+                                            <li>选项二</li>
+                                            <li>选项三</li>
+                                            <li>选项四</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><span>更新资料</span></td>
+                            </tr>
+                            <tr>
+                                <td>1004019</td>
+                                <td></td>
+                                <td></td>
+                                <td>男</td>
+                                <td>武汉</td>
+                                <td>2017-10-07 17:00:00</td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <div class="select-title">未分组</div>
+                                        <ul class="clearfix">
+                                            <li>选项一</li>
+                                            <li>选项二</li>
+                                            <li>选项三</li>
+                                            <li>选项四</li>
+                                            <li>选项五</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><span>更新资料</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="pageCtrBar_wrap">
+                <div class="pageCtrBar clearfix">
+                    <span class="prev"><< 上一页</span>
+                    <a class="current">1</a>
+                    <a>2</a>
+                    <a>3</a>
+                    <a>4</a>
+                    <a>5</a>
+                    <a>6</a>
+                    <a>7</a>
+                    <span class="other">...</span>
+                    <a>38398</a>
+                    <a>38399</a>
+                    <span class="next">下一页 >></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="modal">
+    <div class="modal-Box" id="modal-Box">
+        <div class="modal-close" id="modalCloseBtn"></div>
+        <img src="images/test.jpg" class="modal-img"/>
+    </div>
+</div>
+
+</body>
+<script>
+    $(function(){
+        //
+        var select_title=$("#main .select-wrap .select-title");
+        var select_ul=$("#main .select-wrap ul");
+        select_title.each(function(index){
+            $(this).on("click",function(e){
+                $(this).siblings("ul").toggle();
+                e.stopPropagation();
+                var select_ul_li=$(this).siblings("ul").find("li");
+                select_ul_li.each(function() {
+                    $(this).on("click", function () {
+                        var val = $(this).text();
+                        select_title.eq(index).text(val);
+                        e.stopPropagation();
+                    });
+                });
+            });
+        });
+        //dom
+        $(document).on("click",function(){
+            select_ul.hide();
+        });
+
+    });
+</script>
+
+</html>

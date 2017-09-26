@@ -5,21 +5,22 @@ body{overflow-x:hidden;}
 
 /*banner*/
 .banner{width:93.75%;margin:1.666rem auto 0;/*height:749px;*/height:13.8703rem;background:url("../images/anli-banner.jpg") no-repeat center;background-size:cover;}
-.banner img{width:100%;height:100%;}
 
 /*time*/
 .time{width:93.75%;margin:0 auto;position:relative;padding:0;height:20.3888rem;
-    /*height:20.3888rem;background:url("../images/anli-time-bg1.jpg") no-repeat center;background-size:cover;*/
+    /*height:20.3888rem;*/
 }
-.time .time-line{/*width:135px;height:933px;*//*margin:86px 0 0 3px;*/background:url("../images/anli-timeLine0.png") no-repeat left top;
-    width:2.5rem;height:17.2777rem;position:absolute;/*top:86px;left:3px;*/top:1.592rem;left:0.0555rem;z-index:30;}
-.time .time-line ul{width:87px;height:100%;float:right;text-align:center;}
+.time .time-line{/*width:50px;height:933px;*//*margin:86px 0 0 3px;*/
+    /*width:2.5rem;*/width:0.9259rem;height:17.2777rem;position:absolute;/*top:86px;left:3px;*/top:1.592rem;left:0.0555rem;z-index:30;
+    background:url("../images/anli-timeLine_bg.png") no-repeat 0 0;
+}
+
+.time .time-line ul{width:87px;height:100%;float:right;text-align:center;position:absolute;top:0;right:-87px;z-index:30;}
 .time .time-line ul li{/*height:28px;line-height:28px;*/color:#e1dcda;font-family:"HelveticaNeueCE";/*font-size:32px;*/
-    height:0.5185rem;line-height:0.5185rem;font-size:0.59259rem;cursor:pointer;
-}
-.time .time-line ul .zao{/*margin-top:137px;*/margin-top:2.53703rem;}
-.time .time-line ul .zhong{/*margin-top:285px;*/margin-top:5.27777rem;}
-.time .time-line ul .wan{/*margin-top:292px;*/margin-top:5.407rem;}
+    height:0.5185rem;line-height:0.5185rem;font-size:0.59259rem;cursor:pointer;}
+.time .time-line ul .morning{/*margin-top:137px;*/margin-top:2.53703rem;}
+.time .time-line ul .afternoon{/*margin-top:285px;*/margin-top:5.27777rem;}
+.time .time-line ul .night{/*margin-top:292px;*/margin-top:5.407rem;}
 
 .time .time-line ul li:hover,.time .time-line ul li.active{color:#ffffff;}
 

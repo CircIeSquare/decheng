@@ -1,0 +1,25 @@
+.main-title{}
+.main-title a{width:76px;height:26px;display:block;line-height:26px;text-align:center;color:#4571a0;border:1px solid #ccc;font-size:12px;float:right;margin:7px 16px 0 0;cursor:pointer;}
+.main-title a:hover{background:#4571a0;color:#fff;border-color:#4571a0;}
+
+.main-content{position:relative;}
+.main-content .main-inner{padding:15px;}
+.main-content table{/*margin-top:15px;*/border-collapse:collapse;}
+.main-content table,.main-content table thead,.main-content table tbody{width:100%;}
+.main-content table thead{
+    background:-webkit-linear-gradient(top,#f1f1f1,#dcdcdc);
+    background:-moz-linear-gradient(top,#f1f1f1,#dcdcdc);
+    background:-o-linear-gradient(top,#f1f1f1,#dcdcdc);
+    background:-ms-linear-gradient(top,#f1f1f1,#dcdcdc);
+    background:linear-gradient(top,#f1f1f1,#dcdcdc);
+    background:#dcdcdc\9;
+}
+.main-content table th,.main-content table td{height:35px;line-height:35px;box-sizing:border-box;border-top:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;font-size:12px;text-indent:5px;}
+.main-content table th{color:#444;font-weight:bold;}
+.main-content table td{color:#555;font-family:"arial";}
+.main-content table td span{cursor:pointer;}
+.main-content table tbody tr:nth-child(2n),.main-content table tbody tr.tr2{background:#f9f9f9;}
+
+
+
+

@@ -97,7 +97,8 @@
             }
             obj.find('.title').click(function(){
                 if(obj.data('open')){
-                    obj.css({"display":"none"}).animate({left:-opts.width+'px'},500);
+                    //obj.css({"display":"none"}).animate({left:-opts.width+'px'},500);
+                    obj.animate({left:-opts.width+'px'},500);
                 }else{
                     obj.css({"display":"block !important"}).animate({left:'0px'}, 500);
                 }
@@ -115,7 +116,8 @@
             }
             obj.find('.title').click(function(){
                 if(obj.data('open')){
-                    obj.css({"display":"none"}).animate({right:-opts.width+'px'}, 500);
+                    //obj.css({"display":"none"}).animate({right:-opts.width+'px'}, 500);
+                    obj.animate({right:-opts.width+'px'}, 500);
                 }else{
                     obj.css({"display":"block !important"}).animate({right:'0px'}, 500);
                 }

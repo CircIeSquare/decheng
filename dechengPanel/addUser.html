@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加管理员</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/home.css"/>
+    <link rel="stylesheet" type="text/css" href="css/user.css"/>
+    <link rel="stylesheet" type="text/css" href="css/addUser.css"/>
+    <script src="js/jquery.min.1.8.3.js"></script>
+    <!--<script src="js/jquery.rollbar.js"></script>-->
+    <script src="js/jquery.mousewheel.min.3.1.13.js"></script>
+    <script src="js/sidebar.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header clearfix">
+        <div class="inner clearfix">
+            <div class="logo">
+                <h1>德诚<span>管理后台</span></h1>
+            </div>
+            <ul class="menu">
+                <li>admin</li>
+                <li>个人设置</li>
+                <li>退出系统</li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrap clearfix" id="wrap">
+        <div class="sidebar" id="sidebar">
+            <div class="nav">
+                <div class="menuTop">管理首页</div>
+                <div class="hasMenu">会员管理<span></span></div>
+                <ul class="navContent">
+                    <li>会员一</li>
+                    <li>会员二</li>
+                    <li>会员三</li>
+                </ul>
+                <div class="hasMenu">互动管理<span></span></div>
+                <ul class="navContent">
+                    <li>互动一</li>
+                    <li>互动二</li>
+                    <li>互动三</li>
+                </ul>
+                <div class="hasMenu">产品管理<span></span></div>
+                <ul class="navContent">
+                    <li>产品一</li>
+                    <li>产品二</li>
+                    <li>产品三</li>
+                </ul>
+                <div class="hasMenu">文章管理<span></span></div>
+                <ul class="navContent">
+                    <li>文章一</li>
+                    <li>文章二</li>
+                    <li>文章三</li>
+                </ul>
+                <div class="hasMenu">活动管理<span></span></div>
+                <ul class="navContent">
+                    <li>活动一</li>
+                    <li>活动二</li>
+                    <li>活动三</li>
+                </ul>
+                <div class="hasMenu">门店管理<span></span></div>
+                <ul class="navContent">
+                    <li>门店一</li>
+                    <li>门店二</li>
+                    <li>门店三</li>
+                </ul>
+                <div class="hasMenu">客服管理<span></span></div>
+                <ul class="navContent">
+                    <li>客服一</li>
+                    <li>客服二</li>
+                    <li>客服三</li>
+                </ul>
+                <div class="hasMenu">系统管理<span></span></div>
+                <ul class="navContent">
+                    <li>系统一</li>
+                    <li>系统二</li>
+                    <li>系统三</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main" id="main">
+            <div class="main-title"><h2>添加管理员</h2><a>返回管理员列表</a></div>
+            <div class="main-content">
+                <div class="main-inner">
+                    <form class="clearfix">
+                        <label>
+                            <span class="info">用户名:</span><input type="text" maxlength="16"/>
+                            <span class="msg">不能为空，长度6-16位<br/>由26个大小写英文字母，数字会_组合，以字母开头</span>
+                        </label>
+                        <label>
+                            <span class="info">密&nbsp;&nbsp;&nbsp;码:</span><input type="password" maxlength="16"/>
+                            <span class="msg msg2">不能为纯数字，长度至少6位</span>
+                        </label>
+                        <label>
+                            <span class="info">昵&nbsp;&nbsp;&nbsp;称:</span><input type="text" maxlength="16"/>
+                            <span class="msg msg2">留空时，同用户名</span>
+                        </label>
+                        <label>
+                            <span class="info">角&nbsp;&nbsp;&nbsp;色:</span>
+                            <div class="select-wrap">
+                                <div class="select-title">请选择管理员角色</div>
+                                <ul class="clearfix">
+                                    <li>超级管理员</li>
+                                    <li>客服管理员</li>
+                                    <li>文编管理员</li>
+                                </ul>
+                            </div>
+                            <span class="msg msg2">必选</span>
+                        </label>
+                        <label>
+                            <span class="info">状&nbsp;&nbsp;&nbsp;态:</span>
+                           <div class="state state_active">启用</div>
+                           <div class="state">禁用</div>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="pageCtrBar_wrap">
+                <div class="pageCtrBar clearfix">
+                    <button type="button" class="btn_sub"><img src="images/btn-true.png"/>提交</button>
+                    <a class="btn2">or</a>
+                    <a class="btn2" href="javascript:history.go(-1);">取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+    $(function(){
+        var select_title=$("#main .select-wrap .select-title");
+        var select_ul=$("#main .select-wrap ul");
+        var state_btn=$("#main form label .state");
+
+        select_title.each(function(index){
+            $(this).on("click",function(e){
+                $(this).addClass("select-title-active").siblings("ul").toggle();
+                e.stopPropagation();
+                var select_ul_li=$(this).siblings("ul").find("li");
+                select_ul_li.each(function() {
+                    $(this).on("click", function () {
+                        var val = $(this).text();
+                        select_title.eq(index).text(val).removeClass("select-title-active");
+                        e.stopPropagation();
+                    });
+                });
+            });
+        });
+        //dom
+        $(document).on("click",function(){
+            select_ul.hide();
+            select_title.removeClass("select-title-active");
+        });
+
+        state_btn.each(function(){
+            $(this).on("click",function(){
+                //alert($(this).index());
+                $(this).addClass("state_active").siblings(".state").removeClass("state_active");
+            });
+        });
+    });
+</script>
+</html>

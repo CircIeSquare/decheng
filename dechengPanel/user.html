@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>账号管理</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/home.css"/>
+    <link rel="stylesheet" type="text/css" href="css/user.css"/>
+    <script src="js/jquery.min.1.8.3.js"></script>
+    <script src="js/jquery.rollbar.js"></script>
+    <script src="js/jquery.mousewheel.min.3.1.13.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/modal.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header clearfix">
+        <div class="inner clearfix">
+            <div class="logo">
+                <h1>德诚<span>管理后台</span></h1>
+            </div>
+            <ul class="menu">
+                <li>admin</li>
+                <li>个人设置</li>
+                <li>退出系统</li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrap clearfix" id="wrap">
+        <div class="sidebar" id="sidebar">
+            <div class="nav">
+                <div class="menuTop">管理首页</div>
+                <div class="hasMenu">会员管理<span></span></div>
+                <ul class="navContent">
+                    <li>会员一</li>
+                    <li>会员二</li>
+                    <li>会员三</li>
+                </ul>
+                <div class="hasMenu">互动管理<span></span></div>
+                <ul class="navContent">
+                    <li>互动一</li>
+                    <li>互动二</li>
+                    <li>互动三</li>
+                </ul>
+                <div class="hasMenu">产品管理<span></span></div>
+                <ul class="navContent">
+                    <li>产品一</li>
+                    <li>产品二</li>
+                    <li>产品三</li>
+                </ul>
+                <div class="hasMenu">文章管理<span></span></div>
+                <ul class="navContent">
+                    <li>文章一</li>
+                    <li>文章二</li>
+                    <li>文章三</li>
+                </ul>
+                <div class="hasMenu">活动管理<span></span></div>
+                <ul class="navContent">
+                    <li>活动一</li>
+                    <li>活动二</li>
+                    <li>活动三</li>
+                </ul>
+                <div class="hasMenu">门店管理<span></span></div>
+                <ul class="navContent">
+                    <li>门店一</li>
+                    <li>门店二</li>
+                    <li>门店三</li>
+                </ul>
+                <div class="hasMenu">客服管理<span></span></div>
+                <ul class="navContent">
+                    <li>客服一</li>
+                    <li>客服二</li>
+                    <li>客服三</li>
+                </ul>
+                <div class="hasMenu">系统管理<span></span></div>
+                <ul class="navContent">
+                    <li>系统一</li>
+                    <li>系统二</li>
+                    <li>系统三</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main" id="main">
+            <div class="main-title"><h2>后台管理员列表</h2><a>添加管理员</a></div>
+            <div class="main-content">
+                <div class="main-inner">
+                    <table>
+                        <thead>
+                            <tr>
+                            <th>用户名</th>
+                            <th>昵称</th>
+                            <th>角色</th>
+                            <th>最后登录时间</th>
+                            <th>状态</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>admin</td>
+                                <td>Superman</td>
+                                <td>超级管理员</td>
+                                <td>2017-10-07 17:00:00</td>
+                                <td>启用</td>
+                                <td></td>
+                            </tr>
+                            <tr class="tr2">
+                                <td>user1</td>
+                                <td>user1</td>
+                                <td>客服管理员</td>
+                                <td>2017-10-07 17:00:00</td>
+                                <td>启用</td>
+                                <td><span class="edit">编辑</span> | <span class="delete modal-open">删除</span></td>
+                            </tr>
+                            <tr>
+                                <td>user2</td>
+                                <td>user2</td>
+                                <td>客服管理员</td>
+                                <td>2017-10-07 17:00:00</td>
+                                <td>启用</td>
+                                <td><span class="edit">编辑</span> | <span class="delete modal-open">删除</span></td>
+                            </tr>
+                            <tr class="tr2">
+                                <td>user3</td>
+                                <td>user3</td>
+                                <td>客服管理员</td>
+                                <td>2017-10-07 17:00:00</td>
+                                <td>启用</td>
+                                <td><span class="edit">编辑</span> | <span class="delete modal-open">删除</span></td>
+                            </tr>
+                            <tr>
+                                <td>user4</td>
+                                <td>user4</td>
+                                <td>客服管理员</td>
+                                <td>2017-10-07 17:00:00</td>
+                                <td>启用</td>
+                                <td><span class="edit">编辑</span> | <span class="delete modal-open">删除</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="modal">
+    <div class="modal-Box" id="modal-Box">
+        <div class="Box-title">
+            <h5>消息</h5>
+            <span class="closeBtn" id="modalCloseBtn">×</span>
+        </div>
+        <div class="Box-main">
+            <img src="images/modal-icon.png"/>
+            <h5>确认删除该管理员？</h5>
+        </div>
+        <div class="Box-foot">
+            <button type="button" class="BtnTrue" id="BtnTrue">确定</button>
+            <button type="button" class="BtnFalse" id="BtnFalse">取消</button>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -3,6 +3,14 @@
  */
 
 $(function(){
+
+    //案例详情右导航点
+    var section=$(".section");
+    var siderbar_right=$("#sidebar-right .list .prev");
+    for(var i=0;i<section.length;i++){
+        siderbar_right.after('<div class="li"></div>');
+    };
+
     //右导航
     $(window,document).on('scroll',function(){
         var $scroll=$(this).scrollTop();
@@ -17,9 +25,10 @@ $(function(){
     });
     //点
     var $section_ctl=$("#sidebar-right .li");
+    $section_ctl.eq(0).addClass("active");
     $section_ctl.each(function(index){
         $(this).on("click",function(){
-            $(this).addClass('active').siblings('li').removeClass('active');
+            $(this).addClass('active').siblings('.li').removeClass('active');
             var $section_top=$(".section").eq(index).offset().top-200;
             $('html,body').animate({
                 scrollTop:$section_top

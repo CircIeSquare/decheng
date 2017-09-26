@@ -1,0 +1,54 @@
+*{margin:0;padding:0;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea, p, blockquote, th, td {padding: 0;margin: 0;}
+fieldset, img {border:0;font-size:0;}
+table {border-collapse: collapse;border-spacing: 0;}
+ol, ul {list-style: none;}
+address, caption, cite, code, dfn, em, strong, th, var {font-weight: normal;font-style: normal;}
+caption, th {text-align: left;}
+h1, h2, h3, h4, h5, h6 {font-weight: normal;font-size: 100%;}
+q:before, q:after {content: '';}
+a{text-decoration:none;}
+a:hover{text-decoration:none;}
+body{font-family:"arial","Microsoft YaHei";}
+.clearfix:before,.clearfix:after{content:"";display:table;}
+.clearfix:after{clear:both;overflow:hidden;}
+.clearfix{*zoom:1;}
+
+/*对话框*/
+body{position:relative;}
+.modal{width:100%;height:100%;position:fixed;top:0;left:0;background:rgba(0,0,0,0.3);z-index:99;display:none;}
+.modal .modal-Box{width:217px;height:161px;border:8px solid #ddd;border-radius:8px;box-shadow:0 0 10px 0 rgba(0,0,0,0.5);position:absolute;top:0;right:0;bottom:0;left:0;/*margin:auto;*/}
+.modal .modal-Box .Box-title{width:100%;height:30px;line-height:30px;background:url("../images/modal-titleBg.png") repeat-x;cursor:move;}
+.modal .modal-Box .Box-title h5{float:left;padding-left:10px;}
+.modal .modal-Box .Box-title span{float:right;width:20px;height:20px;line-height:20px;margin:5px 5px 0 0;cursor:pointer;text-align:center;}
+.modal .modal-Box .Box-title span:hover{background:#c72015;color:#fff;}
+.modal .modal-Box .Box-main{height:88px;background:#fff;border-bottom:1px solid #dadee5;}
+.modal .modal-Box .Box-main img{float:left;padding:24px 10px 0 26px;}
+.modal .modal-Box .Box-main h5{height:88px;line-height:88px;font-size:12px;}
+.modal .modal-Box .Box-foot{width:100%;height:42px;background:#f6f6f6;text-align:right;}
+.modal .modal-Box .Box-foot button{display:inline-block;width:44px;height:24px;line-height:24px;border-radius:3px;text-align:center;cursor:pointer;}
+.modal .modal-Box .Box-foot button.BtnTrue{border:1px solid #426dc9;margin:8px 15px 0 0;background:url("../images/moadal-btnBg.png") repeat-x;color:#fff;}
+.modal .modal-Box .Box-foot button.BtnFalse{border:1px solid #999999;margin:8px 8px 0 0;background:url("../images/modal-btnBg2.png") repeat-x;color:#333;}
+
+/*滚动条*/
+.rollbar-path-vertical,.rollbar-path-horizontal,.rollbar-handle{border-radius:5px;}
+.rollbar-handle{position:relative;background-color:#58bcee;}
+.rollbar-path-vertical{position:absolute;width:8px;top:0;right:0;}
+.rollbar-path-vertical .rollbar-handle{width:100%;}
+.rollbar-path-horizontal{position:absolute;height:8px;bottom:0;left:0;}
+.rollbar-path-horizontal .rollbar-handle{height:100%;}
+/*main 分页控制条*/
+.pageCtrBar_wrap{width:100%;height:34px;border-top:1px solid #adc6e0;position:absolute;left:0;bottom:0;z-index:10;
+    background:-webkit-linear-gradient(top,#d6e6f8,#fff);
+    background:-moz-linear-gradient(top,#d6e6f8,#fff);
+    background:-o-linear-gradient(top,#d6e6f8,#fff);
+    background:-ms-linear-gradient(top,#d6e6f8,#fff);
+    background:linear-gradient(top,#d6e6f8,#fff);
+}
+.pageCtrBar{padding:4px 15px;font-size:12px;}
+.pageCtrBar span,.pageCtrBar a{height:24px;line-height:24px;padding:0 5px;border:1px solid #c3c4ba;display:block;float:left;margin-right:5px;cursor:pointer;}
+.pageCtrBar .current{color:#fff;background:#4571a0;border-color:#4571a0;}
+.pageCtrBar span:hover,.pageCtrBar a:hover{box-shadow:0 0 3px 0 #000;}
+.pageCtrBar .other{border:none;}
+.pageCtrBar .other:hover{color:#000;box-shadow:none;}

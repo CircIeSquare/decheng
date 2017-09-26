@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/login.css"/>
+    <script src="js/jquery.min.1.8.3.js"></script>
+
+</head>
+<body>
+    <div class="login-box" id="loginBox">
+        <h1>管理登录</h1>
+        <div class="msg-box msg-box-login" id="msg-info">密码错误</div>
+        <form class="clearfix" id="loginForm"><!-- action="/repsponse.php" onsubmit="toSubmit()"-->
+            <label>用户名:<input type="text" maxlength="16" id="username"/></label>
+            <label>密&nbsp;&nbsp;&nbsp;码:<input type="password" maxlength="16" id="userPwd"/></label>
+            <button type="submit"><img src="images/loginIcon.png"/><span>登录</span></button>
+        </form>
+    </div>
+</body>
+<script>
+    $(function(){
+
+
+        //消息框
+        $("#loginForm button[type='submit']").on("click",function(){
+            var username=$("#username").val();
+            var userPwd=$("#userPwd").val();
+            if(username==""){
+                alert("请输入用户名！");
+            }else if(username!==""&&userPwd==""){
+                alert("请输入密码！");
+            }else if(username.match(/^\w{3,20}$/)&&userPwd.match(/^\w{3,20}$/)){
+                //用户名和密码可设置字母、数字、下划线
+                $("#loginBox .msg-box-login").text("登录成功");
+                $("#msg-info").addClass("msg-box").css("display","block");
+                setTimeout(function(){
+                    $("#msg-info").slideUp(300);
+                },3000);
+            }else{
+                $("#loginBox .msg-box").text("用户名或密码错误");
+                $("#msg-info").removeClass("msg-box-login").css("display","block");
+                setTimeout(function(){
+                    $("#msg-info").slideUp(300);
+                },3000);
+            };
+        });
+
+    });
+</script>
+</html>

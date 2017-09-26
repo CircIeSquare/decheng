@@ -4,32 +4,30 @@
     <meta charset="UTF-8">
     <title>我们的产品</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1，user-scalable=no">
-    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-    <!--<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>-->
+    <!--<link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">-->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <link type="text/css" rel="stylesheet" href="css/product.css"/>
 
-   <!-- <script src="js/flexible_css.js"></script>-->
     <script src="js/flexible.min.js"></script>
     <script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
     <script>
         if(window.jQuery==undefined){
-            document.write('<script src="/js/jquery.min.1.8.3.js"><\/script>');
+            document.write('<script src="js/jquery.min.1.8.3.js"><\/script>');
         }
     </script>
 
     <script src="js/jquery.sliderBar.js"></script>
     <script src="js/sidebar.js"></script>
-    <!--<script src="js/product.js"></script>-->
 </head>
 <body>
     <!--head-->
-    <div class="container-fluid head" id="head"><img src="images/logo.png"/></div>
+    <div class="container-fluid head" id="head"><a href="index.html"><img src="images/logo.png"/></a></div>
     <!--header-->
     <div class="container-fluid header" id="header">
         <div class="row">
             <div class="col-lg-1 col-lg-push-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-5 logo">
-                <a href="#"><img src="images/logo.png"/></a>
+                <a href="index.html"><img src="images/logo.png"/></a>
             </div>
             <div class="hidden-lg visible-md visible-sm visible-xs col-md-1 col-md-offset-10  col-sm-1 col-sm-offset-10 col-xs-1 col-xs-offset-10 NewNav" id="NewNav">
                 <img src="images/icon/nav.svg" id="NewNav-ctr"/>
@@ -37,7 +35,7 @@
         </div>
     </div>
     <!--左导航-->
-    <div class="sidebar sidebar-left visible-lg visible-md visible-xs visible-sm" id="sidebar-left">
+    <div class="sidebar sidebar-left" id="sidebar-left">
         <div class="title">
             <div class="cont">
                 <span>MENU</span>
@@ -49,7 +47,7 @@
             <div class="search">
                 <input type="text" maxlength="12"/>
                 <img src="images/sidebar-search.png"/>
-                <div class="close hid-lg visible-md visible-sm visible-xs">
+                <div class="close">
                     <img src="images/icon/close.svg"/>
                 </div>
             </div>
@@ -89,7 +87,7 @@
                 <ul>
                     <li>德诚智慧家</li>
                     <li>武汉市武昌区楚商大厦三楼</li>
-                    <li><a href="#">12345678@qq.com</a></li>
+                    <li><a href="mailto:123456789@qq.com">12345678@qq.com</a></li>
                     <li>027-12345678</li>
                 </ul>
             </div>
@@ -336,7 +334,7 @@
         </div>
     </div>
     <!--友链-->
-    <div class="friendlyLink visible-lg hidden-md hidden-md hidden-sm hidden-xs">
+    <div class="friendlyLink">
         <ul>
             <li>友情链接:</li>
             <li><a href="#">/  泥巴公社</a></li>
@@ -380,14 +378,12 @@
         </div>
     </div>
     <!--bottom-->
-    <div class="container-fluid bottom">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text">
-                My website. All rights reserved, 2017, wuhan ICP for 8888888<br>
-                This page content for the web presentation data,the front desk page content can be modified
-                in the background.
-            </div>
-        </div>
+    <div class="bottom">
+        <p class="text">
+            My website. All rights reserved, 2017, wuhan ICP for 8888888<br>
+            This page content for the web presentation data,the front desk page content can be modified
+            in the background.
+        </p>
     </div>
 </body>
 <script>
@@ -397,18 +393,12 @@
         var win_w_state;
         var title_W;
 
-        if(win_w<=1200){
+        if(win_w<1200){
             win_w_state=$(document).width();
             title_W=0;
-
-            $("#header").show();
-            $("#head").hide();
         }else{
             win_w_state=$(document).width()*0.414583;
-            title_W=60;
-
-            $("#header").hide();
-            $("#head").show();
+            title_W=$(document).width()*0.03125;
         };
 
         $('.sidebar-left').sliderBar({
@@ -423,14 +413,13 @@
             titleHeight:win_h
         });
 
-        //win_w<1200?$("#header").show():$("#head").show();
-        /*if(win_w<1200){
+        if(win_w<1200){
             $("#header").show();
             $("#head").hide();
         }else{
             $("#header").hide();
             $("#head").show();
-        };*/
+        };
 
         (function(){
             var $nav_li=$("#content .content-nav li");

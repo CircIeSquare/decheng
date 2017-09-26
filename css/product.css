@@ -39,10 +39,6 @@ body{overflow-x:hidden;}
 }
 .content .content-body-wrap li .look:before{content:"";/*width:112px;height:30px;position:absolute;top:0;left:-112px;*/
     width:2.07407rem;height:0.555rem;position:absolute;top:0;left:-2.07407rem;
-    /*background:-webkit-linear-gradient(left,#60edea,#7273fd);
-    background:-o-linear-gradient(left,#60edea,#7273fd);
-    background:-moz-linear-gradient(left,#60edea,#7273fd);
-    background:linear-gradient(left,#60edea,#7273fd);*/
     background:url("../images/product_img_bg.png") no-repeat;background-size:cover;
     transition:all 0.3s ease;z-index:-1;
 }
@@ -52,10 +48,22 @@ body{overflow-x:hidden;}
 
 
 /*meta*/
+@media screen and (max-width:1440px) {
+    .content .content-nav li{margin-right:0.9037rem;}
+    .content .content-body-wrap{width:77.222%;}
+}
+@media screen and (max-width:1366px) {
+    .content .content-nav li{margin-right:0.7037rem;}
+}
+@media screen and (max-width:1280px) {
+    .content .content-nav li{margin-right:0.4037rem;}
+}
+
 @media screen and (max-width:1200px){
     /*header*/
    /* .header{height: 80px !important;}*/
     .content{margin-top:80px;}
+    .content .content-nav li{margin-right:0.2537rem;}
 }
 
 @media screen and (max-width:1024px){

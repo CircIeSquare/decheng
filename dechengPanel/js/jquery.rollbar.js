@@ -1,0 +1,376 @@
+/**
+ *自定义滚动条
+ *参数c,设置滚动条的容器
+ *参数s,设置滚动条的属性样式
+ * {
+ * contentFilter:""，
+ * scroll:"horizontal"|"vertical",
+ * sliderOpacity:"0-1",
+ * zIndex:"",
+ * sliderOpacityTime:"",
+ * lazyCheckScroll:"",
+ * autoHideTime:"",
+ * sliderOpacity:"",
+ * onscroll:"",
+ * pathPadding:"",
+ * scrollTime:"",
+ *scrollInterval:"",
+ *scrollEasing:"",
+ *blockGlobalScroll:"",
+ *touchSpeed:"",
+ *
+ *}
+ *
+ *
+ */
+
+
+
+(function($) {
+    function RollBar(c, s) {
+        this.container = $(c);
+        this.settings = s;
+        this.timer = 0;
+        this.before = {
+            'v' : 0,
+            'h' : 0
+        };
+        this.touch = {};
+        this.pressed = 0;
+        this.vslider = $('<div/>', {
+            'class' : 'rollbar-handle'
+        });
+        this.vpath = $('<div/>', {
+            'class' : 'rollbar-path-vertical'
+        });
+        this.hslider = $('<div/>', {
+            'class' : 'rollbar-handle'
+        });
+        this.hpath = $('<div/>', {
+            'class' : 'rollbar-path-horizontal'
+        });
+        this.pathSize();
+        this.sliders = this.vslider.add(this.hslider);
+        this.container.css({
+            'position' : 'relative',
+            'overflow' : 'hidden'
+        }).contents().filter(this.settings.contentFilter).wrapAll(
+            '<div class="rollbar-content"></div>');
+        this.content = this.container.children('.rollbar-content').css({
+            'position' : 'relative',
+            'top' : 0,
+            'left' : 0,
+            'overflow' : 'hidden'
+        });
+        if (this.settings.scroll == 'horizontal') {
+            this.container.prepend(this.hpath.append(this.hslider));
+        } else if (this.settings.scroll == 'vertical') {
+            this.container.prepend(this.vpath.append(this.vslider));
+        } else {
+            this.container.prepend(this.vpath.append(this.vslider), this.hpath
+                .append(this.hslider));
+        }
+        this.vpath.add(this.hpath).css({
+            'z-index' : this.settings.zIndex,
+            'display' : 'none'
+        });
+        this.sliderSize();
+        if (this.settings.sliderOpacity) {
+            this.container.hover(
+                this.fixFn(function() {
+                    this.sliders.stop().fadeTo(this.settings.sliderOpacityTime, 1);
+                }),
+                this.fixFn(function() {
+                    this.sliders.stop().fadeTo(this.settings.sliderOpacityTime, this.settings.sliderOpacity);
+                    //alert('2');
+                })
+            );
+        }
+
+        this.init();
+        this.bindEvent($(window), 'load', function() {
+            setTimeout(this.fixFn(this.checkScroll), 10);
+        });
+        if (this.settings.lazyCheckScroll > 0) {
+            setInterval(this.fixFn(function() {
+                this.pathSize();
+                this.sliderSize(true);
+                this.checkScroll();
+            }), this.settings.lazyCheckScroll);
+        }
+    }
+    RollBar.prototype.checkScroll = function() {
+        this.vtrack = this.vpath.height() - this.vslider.height();
+        this.htrack = this.hpath.width() - this.hslider.width();
+        this.vdiff = this.content.height() - this.container.height();
+        this.hdiff = this.content.width() - this.container.width();
+        if (!this.settings.autoHide)
+            return;
+        if (this.vdiff > 0) {
+            if(this.vdiff + this.content.position().top < 0) this.content.css({top:-this.vdiff});
+            this.vpath.fadeIn(this.settings.autoHideTime);
+        } else {
+            this.content.css({top:0});
+            this.vpath.fadeOut(this.settings.autoHideTime);
+        }
+        if (this.hdiff > 0) {
+            this.hpath.fadeIn(this.settings.autoHideTime);
+            if(this.hdiff + this.content.position().left < 0) this.content.css({left:-this.hdiff});
+        } else {
+            this.content.css({left:0});
+            this.hpath.fadeOut(this.settings.autoHideTime);
+        }
+    };
+    RollBar.prototype.pathSize = function() {
+        var a = parseInt(this.settings.pathPadding, 10);
+        this.vpath.css({
+            'top' : a + 'px',
+            'height' : this.container.height() - 2 * a + 'px'
+        });
+        this.hpath.css({
+            'left' : a + 'px',
+            'width' : this.container.width() - 2 * a + 'px'
+        });
+    };
+    RollBar.prototype.sliderSize = function(refresh) {
+        if(refresh == undefined) refresh = false;
+        if(refresh) {
+            this.vslider.css({
+                'height' : this.vpath.height() * this.container.height() / this.content.height(),
+            });
+            this.hslider.css({
+                'width' : this.vpath.width() * this.container.width() / this.content.width(),
+            });
+        } else {
+            this.vslider.css({
+                'height' : this.vpath.height() * this.container.height() / this.content.height(),
+                'opacity' : this.settings.sliderOpacity
+            });
+            this.hslider.css({
+                'width' : this.vpath.width() * this.container.width() / this.content.width(),
+                'opacity' : this.settings.sliderOpacity
+            });
+        }
+    };
+    RollBar.prototype.scroll = function(v, h, e) {
+        var a = 0;
+        var b = 0;
+        if (v < 0) {
+            v = 0;
+        }
+        if (v > this.vtrack) {
+            v = this.vtrack;
+        }
+        this.vslider.css('top', v + 'px');
+        if (h < 0) {
+            h = 0;
+        }
+        if (h > this.htrack) {
+            h = this.htrack;
+        }
+        this.hslider.css('left', h + 'px');
+        if (this.vdiff > 0) {
+            b = v / this.vtrack;
+            this.content.css('top', Math.round(-this.vdiff * b));
+            if (e && (v && v != this.vtrack)) {
+                e.stopPropagation();
+                e.preventDefault();
+            }
+        }
+        if (this.hdiff > 0) {
+            a = h / this.htrack;
+            this.content.css('left', Math.round(-this.hdiff * a));
+            if (e && (h && h != this.htrack)) {
+                e.stopPropagation();
+                e.preventDefault();
+            }
+        }
+        if (this.before.v != b || this.before.h != a) {
+            if (typeof this.settings.onscroll == 'function') {
+                this.settings.onscroll.call(this.container.get(0), b, a);
+            }
+            this.before.v = b;
+            this.before.h = a;
+        }
+    };
+    RollBar.prototype.easeScroll = function(v, h) {
+        var n = 0;
+        var a = Math.floor(this.settings.scrollTime
+            / this.settings.scrollInterval);
+        var b = this.vslider.position().top;
+        var c = this.hslider.position().left;
+        var d = $.easing[this.settings.scrollEasing] || $.easing.linear;
+
+        this.timer = window.setInterval(this.fixFn(function() {
+            this.scroll(b + d(n / a, n, 0, 1, a) * v, c + d(n / a, n, 0, 1, a) * h);
+        }), this.settings.scrollInterval);
+    };
+    RollBar.prototype.fixFn = function(f, s) {
+        var a = this;
+        return function() {
+            f.apply(s || a, Array.prototype.slice.call(arguments));
+        };
+    };
+    RollBar.prototype.bindEvent = function(t, e, f, s) {
+        return t.bind(e, this.fixFn(f, s));
+    };
+    RollBar.prototype.init = function() {
+        var f = $(window.document);
+        this.bindEvent(this.sliders, 'mousedown', function(e) {
+            this.pressed = (e.target === this.vslider.get(0)) ? 1 : 2;
+            var a = e.pageX;
+            var b = e.pageY;
+            var c = this.vslider.position().top;
+            var d = this.hslider.position().left;
+            this.bindEvent(f, 'mousemove', function(e) {
+                if (this.pressed == 1) {
+                    this.scroll(c + (e.pageY - b), d);
+                } else {
+                    this.scroll(c, d + (e.pageX - a));
+                }
+            });
+            this.bindEvent(f, 'selectstart', function(e) {
+                e.preventDefault();
+            });
+        });
+        this.bindEvent(f, 'mouseup', function(e) {
+            this.pressed = 0;
+            f.unbind('mousemove');
+            f.unbind('selectstart');
+        });
+        this.bindEvent(this.container, 'touchstart', function(e) {
+            var a = e.originalEvent;
+            var b = a.changedTouches[0];
+            this.touch.sx = b.pageX;
+            this.touch.sy = b.pageY;
+            this.touch.sv = this.vslider.position().top;
+            this.touch.sh = this.hslider.position().left;
+            this.sliders.stop().fadeTo(this.settings.sliderOpacityTime, 1);
+            if (this.settings.blockGlobalScroll && (this.vdiff || this.hdiff)) {
+                a.stopPropagation();
+            }
+        });
+        this.bindEvent(this.container, 'touchmove', function(e) {
+            var a = e.originalEvent;
+            var b = a.targetTouches[0];
+            this.scroll(this.touch.sv + (this.touch.sy - b.pageY)
+                * this.settings.touchSpeed, this.touch.sh
+                + (this.touch.sx - b.pageX) * this.settings.touchSpeed, e);
+            if (this.settings.blockGlobalScroll && (this.vdiff || this.hdiff)) {
+                a.preventDefault();
+                a.stopPropagation();
+            }
+        });
+        this.bindEvent(this.container, 'touchend touchcancel', function(e) {
+            var a = e.originalEvent;
+            var b = a.changedTouches[0];
+            this.sliders.stop().fadeTo(this.settings.sliderOpacityTime, this.settings.sliderOpacity);
+            if (this.settings.blockGlobalScroll && (this.vdiff || this.hdiff)) {
+                a.stopPropagation();
+            }
+        });
+        var g = this.vpath.height(), htrack = this.hpath.width();
+        this.bindEvent($(window), 'resize', function() {
+            this.pathSize();
+            this.sliderSize();
+            this.checkScroll();
+            if (this.vdiff <= 0) {
+                this.content.css('top', 0);
+            }
+            if (this.hdiff <= 0) {
+                this.content.css('left', 0);
+            }
+            this.scroll(Math.round(parseInt(this.vslider.css('top'), 10)
+                * this.vpath.height() / g), Math.round(parseInt(
+                    this.hslider.css('left'), 10)
+                * this.hpath.width() / htrack));
+            g = this.vpath.height();
+            htrack = this.hpath.width();
+        });
+        this.bindEvent(this.container, 'mousewheel', function(e, a, b, c) {
+            var d = e.target.nodeName;
+            if (d == 'TEXTAREA' || (d == 'SELECT' || d == 'OPTION')) {
+                e.stopPropagation();
+                return
+            }
+            this.scroll(this.vslider.position().top - this.settings.wheelSpeed
+                * c, this.hslider.position().left
+                + this.settings.wheelSpeed * b, e);
+            if (this.settings.blockGlobalScroll && (this.vdiff || this.hdiff)) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
+
+        this.bindEvent(f, 'keydown', function(e) {
+            var a = 0, vkey = 0;
+            vkey = (e.keyCode == 38) ? -this.settings.keyScroll : vkey;
+            vkey = (e.keyCode == 40) ? this.settings.keyScroll : vkey;
+            a = (e.keyCode == 37) ? -this.settings.keyScroll : a;
+            a = (e.keyCode == 39) ? this.settings.keyScroll : a;
+            if (vkey || a) {
+                this.easeScroll(vkey, a);
+            }
+        });
+        this.bindEvent(this.container, "dragstart", function(e) {
+            e.preventDefault();
+        });
+        this.bindEvent(this.container, 'rollbar', function(e, v, h, a) {
+            e.stopPropagation();
+            if (v === 'reset') {
+                this.container.find('.rollbar-content, .rollbar-handle').css({
+                    top : 0,
+                    left : 0
+                });
+                return
+            }
+            v = v || 0;
+            h = h || 0;
+            if (/^[-\d\.]+$/.test(v)) {
+                v = parseFloat(v);
+                if (Math.abs(v) <= 1 && !a) {
+                    v *= this.vtrack;
+                } else {
+                    v = v + v * (this.vtrack / this.vdiff - 1);
+                }
+            }
+            if (/^[-\d\.]+$/.test(h)) {
+                h = parseFloat(h);
+                if (Math.abs(h) <= 1 && !a) {
+                    h *= this.htrack;
+                } else {
+                    h = h + h * (this.htrack / this.hdiff - 1);
+                }
+            }
+            this.easeScroll(v, h);
+        });
+    };
+    $.fn.rollbar = function(s) {
+        var a = {
+            scroll : 'both',
+            autoHide : true,
+            autoHideTime : 50,
+            lazyCheckScroll : 300,
+            blockGlobalScroll : false,
+            contentFilter : '*',
+            sliderSize : '30%',
+            sliderOpacity : 0.05,
+            sliderOpacityTime : 200,
+            sliderOpacityDelay : 300,
+            wheelSpeed : 20,
+            touchSpeed : 0.3,
+            pathPadding : '2px',
+            keyScroll : 100,
+            scrollTime : 500,
+            scrollInterval : 15,
+            scrollEasing : 'swing',
+            zIndex : 100,
+            onscroll : function() {
+            }
+        };
+        $.extend(a, s);
+        return this.each(function() {
+            new RollBar(this, a);
+        });
+    };
+})(jQuery);
