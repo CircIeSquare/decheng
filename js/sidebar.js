@@ -10,13 +10,6 @@ $(function(){
              $("#sidebar-left .nav .navContent").eq(index).slideToggle(300).siblings(".navContent").slideUp(300);
          });
     });
-    //上导航
-    $("#nav .hasMenu").each(function(index){
-        $(this).on("click",function(){
-            $(this).find(".subMenu").slideToggle(300,"linear");
-        });
-    });
-
     //移动导航
     $("#NewNav-ctr").on("click",function(){
         $("#sidebar-left .title").trigger("click");

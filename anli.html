@@ -5,10 +5,9 @@
     <title>住户案例</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1，user-scalable=no">
     <!--<link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">-->
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+    <!--<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>-->
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <link type="text/css" rel="stylesheet" href="css/anli.css"/>
-
     <script src="js/flexible.min.js"></script>
     <script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
     <script>
@@ -21,14 +20,16 @@
 </head>
 <body>
     <!--head-->
-    <div class="container-fluid head" id="head"><a href="index.html"><img src="images/logo.png"/></a></div>
+    <div class="head" id="head">
+        <a href="index.html"><img src="images/logo.png"/></a>
+    </div>
     <!--header-->
-    <div class="container-fluid header" id="header">
-        <div class="row">
-            <div class="col-lg-1 col-lg-push-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-5 logo">
+    <div class="header">
+        <div class="header-inner">
+            <div class="logo">
                 <a href="index.html"><img src="images/logo.png"/></a>
             </div>
-            <div class="hidden-lg visible-md visible-sm visible-xs col-md-1 col-md-offset-10  col-sm-1 col-sm-offset-10 col-xs-1 col-xs-offset-10 NewNav" id="NewNav">
+            <div class="NewNav" id="NewNav">
                 <img src="images/icon/nav.svg" id="NewNav-ctr"/>
             </div>
         </div>
@@ -87,12 +88,11 @@
                     <li>德诚智慧家</li>
                     <li>武汉市武昌区楚商大厦三楼</li>
                     <li><a href="mailto:123456789@qq.com">12345678@qq.com</a></li>
-                    <li>027-12345678</li>
+                    <li><a href="tel:027012345678">027-12345678</a></li>
                 </ul>
             </div>
         </div>
     </div>
-
     <!--banner-->
     <div class="banner">
         <img src="images/anlilist-banner_03.jpg"/>
@@ -103,8 +103,8 @@
             <!--content-title-->
             <div class="content-title clearfix">
                 <ul class="filter">
-                    <li>最新<img src="images/anliList-img-jiantou.png"/></li>
-                    <li>最热<img src="images/anliList-img-jiantou.png"/></li>
+                    <li><span>最新</span><img src="images/anliList-img-jiantou.png"/></li>
+                    <li><span>最热</span><img src="images/anliList-img-jiantou.png"/></li>
                 </ul>
                 <p>已为您推荐<span>22</span>套案例</p>
             </div>
@@ -242,7 +242,6 @@
             </div>
         </div>
     </div>
-
     <!--友链-->
     <div class="friendlyLink">
         <ul>
@@ -253,37 +252,47 @@
         </ul>
     </div>
     <!--footer-->
-    <div class="container-fluid footer">
-        <ul class="row footerNav">
-            <li class="col-lg-2 col-lg-pull-5 col-md-2 col-sm-4 col-xs-4"><a href="#">关于我们</a></li>
-            <li class="col-lg-2 col-lg-pull-3 col-md-2 col-sm-4 col-xs-4"><a href="#">设计团队</a></li>
-            <li class="col-lg-2 col-lg-pull-1 col-md-2 col-sm-4 col-xs-4"><a href="#">作品展示</a></li>
-            <li class="col-lg-2 col-lg-push-1 col-md-2 col-sm-4 col-xs-4"><a href="#">合作企业</a></li>
-            <li class="col-lg-2 col-lg-push-3 col-md-2 col-sm-4 col-xs-4"><a href="#">新闻资讯</a></li>
-            <li class="col-lg-2 col-lg-push-5 col-md-2 col-sm-4 col-xs-4"><a href="#">招聘信息</a></li>
-        </ul>
-        <div class="row">
-            <div class="col-lg-3 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 footerAbout">
-                <h5><span>德</span><span>诚</span><span>智</span><span>慧</span><span>家</span></h5>
-                <p>这里加点文案介绍这里加点文案介绍这里加点文案介绍这里加点文案介绍这里加 点文案介绍这里加点文案介绍这里加点文案介绍这里加点文案介绍</p>
-                <ul class="link clearfix">
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 footerContact">
-                <h5>联系方式</h5>
-                <div class="line"></div>
-                <ul class="link">
-                    <li><img src="images/icon/address.svg"/>这里是地址这里是地址这里是地址这里是地址这里是地址</li>
-                    <li><img src="images/icon/tell.svg"/>
-                        <span>(</span><span>8</span><span>8</span><span>8</span><span>8</span><span>)</span>
-                        <span>0</span><span>2</span><span>7</span><span>-</span><span>8</span><span>8</span>
-                        <span>8</span><span>8</span><span>8</span><span>8</span><span>8</span>
-                    <li><img src="images/icon/message.svg"/>8888888@sina.com</li>
-                </ul>
+    <div class="footer">
+        <div class="footer_inner">
+            <ul class="footerNav clearfix">
+                <li class=""><a href="#">关于我们</a></li>
+                <li class=""><a href="#">设计团队</a></li>
+                <li class=""><a href="#">作品展示</a></li>
+                <li class=""><a href="#">合作企业</a></li>
+                <li class=""><a href="#">新闻资讯</a></li>
+                <li class="last_li"><a href="#">招聘信息</a></li>
+            </ul>
+            <div class="footerInfo clearfix">
+
+                <div class="footerAbout">
+                    <h5><span>德</span><span>诚</span><span>智</span><span>慧</span><span>家</span></h5>
+                    <p>这里加点文案介绍这里加点文案介绍这里加点文案介绍这里加点文案介绍这里加 点文案介绍这里加点文案介绍这里加点文案介绍这里加点文案介绍</p>
+                    <ul class="link clearfix">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+
+                <div class="footerContact">
+                    <h5>联系方式</h5>
+                    <div class="line"></div>
+                    <ul class="link">
+                        <li><img src="images/icon/address.svg"/>这里是地址这里是地址这里是地址这里是地址这里是地址</li>
+                        <li>
+                            <a href="tel:027-12345678">
+                                <img src="images/icon/tell.svg"/>
+                                <span>(</span><span>8</span><span>8</span><span>8</span><span>8</span><span>)</span>
+                                <span>0</span><span>2</span><span>7</span><span>-</span><span>8</span><span>8</span>
+                                <span>8</span><span>8</span><span>8</span><span>8</span><span>8</span>
+                            </a>
+                        <li>
+                            <a href="mailto:88888888@sina.com"><img src="images/icon/message.svg"/>8888888@sina.com</a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </div>
@@ -303,7 +312,7 @@
         var win_w_state;
         var title_W;
 
-        if(win_w<1200){
+        if(win_w<=1024){
             win_w_state=$(document).width();
             title_W=0;
         }else{
@@ -322,15 +331,6 @@
             titleWidth:title_W,
             titleHeight:win_h
         });
-
-        if(win_w<1200){
-            $("#header").show();
-            $("#head").hide();
-        }else{
-            $("#header").hide();
-            $("#head").show();
-        };
-
     });
 </script>
 

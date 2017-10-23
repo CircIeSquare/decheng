@@ -29,28 +29,28 @@ $(function(){
 
             //案例
             toBottom(".anli .title","animated fadeInUp");
-            toBottom(".anli .row:eq(0) .li:eq(0)","animated fadeInUp pt-page-delay100");
-            toBottom(".anli .row:eq(0) .li:eq(1)","animated fadeInUp pt-page-delay200");
-            toBottom(".anli .row:eq(0) .li:eq(2)","animated fadeInUp pt-page-delay300");
-            toBottom(".anli .row:eq(0) .li:eq(3)","animated fadeInUp pt-page-delay400");
-            toBottom(".anli .row:eq(1) .li:eq(0)","animated fadeInUp pt-page-delay100");
-            toBottom(".anli .row:eq(1) .li:eq(1)","animated fadeInUp pt-page-delay200");
-            toBottom(".anli .row:eq(1) .li:eq(2)","animated fadeInUp pt-page-delay300");
-            toBottom(".anli .row:eq(1) .li:eq(3)","animated fadeInUp pt-page-delay400");
+            toBottom(".anli .content .li:eq(0)","animated fadeInUp pt-page-delay100");
+            toBottom(".anli .content .li:eq(1)","animated fadeInUp pt-page-delay200");
+            toBottom(".anli .content .li:eq(2)","animated fadeInUp pt-page-delay300");
+            toBottom(".anli .content .li:eq(3)","animated fadeInUp pt-page-delay400");
+            toBottom(".anli .content .li:eq(4)","animated fadeInUp pt-page-delay100");
+            toBottom(".anli .content .li:eq(5)","animated fadeInUp pt-page-delay200");
+            toBottom(".anli .content .li:eq(6)","animated fadeInUp pt-page-delay300");
+            toBottom(".anli .content .li:eq(7)","animated fadeInUp pt-page-delay400");
             //视频
-            toBottom(".shiping .row:eq(0) .media","animated fadeInLeft pt-page-delay100");
-            toBottom(".shiping .row:eq(0) .text","animated fadeInRight pt-page-delay100");
-            toBottom(".shiping .row:eq(1) .txt","animated fadeInLeft pt-page-delay100");
-            toBottom(".shiping .row:eq(1) .pic","animated fadeInRight pt-page-delay100");
+            toBottom(".shipin .shipin_wrap .media","animated fadeInLeft pt-page-delay100");
+            toBottom(".shipin .shipin_wrap .text","animated fadeInRight pt-page-delay100");
+            toBottom(".shipin .chanpin .text-wrap","animated fadeInLeft pt-page-delay100");
+            toBottom(".shipin .chanpin .pic","animated fadeInRight pt-page-delay100");
             //智能
             toBottom(".zhineng .title","animated fadeInUp");
-            toBottom(".zhineng .row li:eq(0)","animated fadeInUp pt-page-delay100");
-            toBottom(".zhineng .row li:eq(1)","animated fadeInUp pt-page-delay200");
-            toBottom(".zhineng .row li:eq(2)","animated fadeInUp pt-page-delay300");
-            toBottom(".zhineng .row li:eq(3)","animated fadeInUp pt-page-delay400");
+            toBottom(".zhineng .content li:eq(0)","animated fadeInUp pt-page-delay100");
+            toBottom(".zhineng .content li:eq(1)","animated fadeInUp pt-page-delay200");
+            toBottom(".zhineng .content li:eq(2)","animated fadeInUp pt-page-delay300");
+            toBottom(".zhineng .content li:eq(3)","animated fadeInUp pt-page-delay400");
             //介绍
-            toBottom(".jieshao .row .pic","animated fadeInLeft pt-page-delay100");
-            toBottom(".jieshao .row .text","animated fadeInLeft pt-page-delay100");
+            toBottom(".jieshao .content .pic","animated fadeInLeft pt-page-delay100");
+            toBottom(".jieshao .content .text","animated fadeInLeft pt-page-delay100");
             //设计师
             toBottom(".shejishi .swiper .swiper-slide1","animated fadeInUp pt-page-delay100");
             toBottom(".shejishi .swiper .swiper-slide2","animated fadeInUp pt-page-delay200");

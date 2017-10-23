@@ -1,7 +1,7 @@
 body{overflow-x:hidden;}
 
 /*content*/
-.content{background:#f6f6f6;width:93.75%;margin-top:90px;/*padding-bottom:48px;*//*margin-top:1.666rem;*/padding-bottom:0.888rem;}
+.content{background:#f6f6f6;width:93.75%;margin:90px auto 0;/*padding-bottom:48px;*//*margin-top:1.666rem;*/padding-bottom:0.888rem;}
 .content .content-nav{color:#000;text-align:center;/*padding:94px 0 51px 0;*/padding:1.7407rem 0 0.9444rem 0;}
 .content .content-nav ul{display:inline-block;}
 .content .content-nav li{font-family:"Microsoft YaHei";float:left;
@@ -19,12 +19,12 @@ body{overflow-x:hidden;}
 
 .content .content-body-wrap{/*width:1210px;*/width:67.222%;margin:0 auto;/*height:812px;*/
     min-height:15.037rem;/*max-height:22.555rem;*/border:1px solid #e7e7e7;background:#fff;border-collapse:collapse;
-    font-family:"Microsoft YaHei";position:relative;
+    font-family:"Microsoft YaHei";position:relative;box-sizing:border-box;
 }
 /*.content .content-body{display:none;}*/
 .content .content-body-wrap .content-body{width:100%;min-height:15.037rem;/*max-height:22.555rem;*/border-collapse:collapse;position:absolute;top:0;left:0;display:none;}
 .content .content-body-wrap .content-body li{width:25%;/*height:406px;*/height:7.5185rem;/*border:1px solid #e7e7e7;*/
-    /*width:2.8148rem;*/border:0.0185rem solid #e7e7e7;text-align:center;border-collapse:collapse;float:left;
+    /*width:2.8148rem;*/border:0.0185rem solid #e7e7e7;text-align:center;border-collapse:collapse;float:left;box-sizing:border-box;
 }
 .content .content-body-wrap li img{/*width:161px;height:123px;padding-top:96px;*/box-sizing:content-box;
     width:2.98148rem;height:2.2777rem;padding-top:1.777rem;
@@ -60,16 +60,16 @@ body{overflow-x:hidden;}
 }
 
 @media screen and (max-width:1200px){
-    /*header*/
-   /* .header{height: 80px !important;}*/
     .content{margin-top:80px;}
     .content .content-nav li{margin-right:0.2537rem;}
 }
 
 @media screen and (max-width:1024px){
     .content{width:100%;}
+    .content .content-nav{width:93.75%;margin:0 auto;}
+
     .content .content-nav li{margin-right:1rem;}
-    .content .content-body-wrap{width:100%;min-height:15.037rem;}
+    .content .content-body-wrap{/*width:100%;*/width:93.75%;min-height:15.037rem;}
     .content .content-body-wrap .content-body{min-height:15.037rem;}
 }
 @media screen and (max-width:992px){

@@ -1,7 +1,4 @@
-body{overflow-x:hidden;}
-
-/*header*/
-.header{display:none;}
+body{width:100%;position:relative;overflow-x:hidden;}
 
 /*banner*/
 .banner{width:93.75%;margin:1.666rem auto 0;/*height:749px;*/height:13.8703rem;background:url("../images/anli-banner.jpg") no-repeat center;background-size:cover;}
@@ -23,7 +20,6 @@ body{overflow-x:hidden;}
 .time .time-line ul .night{/*margin-top:292px;*/margin-top:5.407rem;}
 
 .time .time-line ul li:hover,.time .time-line ul li.active{color:#ffffff;}
-
 
 
 .time .content-wrap{width:100%;position:relative;height:20.3888rem;}
@@ -49,7 +45,7 @@ body{overflow-x:hidden;}
 
 .time .content1 .info .span1{margin-right:-0.8rem;}
 .time .content1 .info .span2{margin-right:-1.6rem;}
-.time .content .info .tit img{width:3.703rem;height:3.703rem;line-height:0;padding:0;margin:-1.8rem 0.8rem 0;}
+.time .content .info .tit img{width:3.703rem;height:3.703rem;line-height:0;padding:0;margin: 0 0.8rem 0;position:relative;bottom:-0.9rem;}
 .time .content1 .info .tit img{margin-left:1.9rem;}
 
 .time .content .info p{/*width:685px;line-height:40px;width:40.05%;*/width:10rem;line-height:0.74rem;/*margin:31px auto 0;*/
@@ -82,13 +78,11 @@ body{overflow-x:hidden;}
 @media screen and (max-width:992px){
     .time .time-line{display:none;}
     .time .content .info .tit{padding-top:3.333rem;}
-   /*.time .content .info .tit .span1,.time .content .info .tit .span2{width:50%;margin:0 auto;text-align:center;}
-    .time .content .info .tit img{};*/
 }
 @media screen and (max-width:900px){
     .time .content .info .tit{padding-top:1.333rem;}
-    /*.time .content .info .tit span{line-height:1.703rem;}*/
     .time .content .info .tit .span1{width:60%;margin:0 auto;text-align:center;display:block;}
+    .time .content .info .tit img{bottom:inherit;}
     .time .content1 .info .tit img{margin-left:auto;margin-right:auto;}
     .time .content .info .tit .span2{width:60%;margin:0 auto;text-align:center;display:block;line-height:2.703rem;}
 }

@@ -60,7 +60,7 @@ $(function(){
         function sum(){
             num_shTxt>2?num_shTxt=0:num_shTxt+=1;
             shTxtCtrBtn.eq(num_shTxt).addClass("active").siblings().removeClass("active");
-            shTxt.eq(num_shTxt).fadeIn().siblings(".txt-ctr").fadeOut();
+            shTxt.eq(num_shTxt).show().siblings(".txt-ctr").hide();
             shPic.eq((num_shTxt*3)).fadeIn().siblings().fadeOut();
         };
         shTxt.eq(0).show();
@@ -69,7 +69,7 @@ $(function(){
                 clearInterval(timer_shTxt);
                 num_shTxt=index;
                 $(this).addClass("active").siblings().removeClass("active");
-                shTxt.eq(num_shTxt).fadeIn().siblings(".txt-ctr").fadeOut();
+                shTxt.eq(num_shTxt).show().siblings(".txt-ctr").hide();
                 shPic.eq((num_shTxt*3)).fadeIn().siblings().fadeOut();
             });
             $(this).on("mouseout",function(){

@@ -58,7 +58,7 @@
                 'width': opts.width+'px',
                 'height' : opts.height+'px',
                 'position':'relative',
-                'padding':'20px 30px',
+                'padding':'10px 30px',
                 'overflow-x':'hidden',
                 'overflow-y':'auto',
                 'font-family':'Microsoft YaHei',
@@ -79,7 +79,8 @@
                 /*'padding':'8px 4px 0px 5px',*/
                 'color':'#6ba7f5',
                 'cursor': 'pointer',
-                'font-family':'Microsoft Yahei'
+                'font-family':'Microsoft Yahei',
+                'z-index': "9999"
             };
 
             //设置标题样式

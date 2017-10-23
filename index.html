@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1，user-scalable=no">
     <title>德诚智慧家</title>
     <!--<link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">-->
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+    <!--<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>-->
     <link type="text/css" rel="stylesheet" href="css/swiper.min.css"/>
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <link type="text/css" rel="stylesheet" href="css/index.css"/>
@@ -20,7 +20,7 @@
     </script>
     <script src="js/swiper.min.js"></script>
     <!--百叶窗-->
-    <script src="js/slider.min.js"></script>
+    <script src="js/slider2.js"></script>
     <!--右导航-->
     <script src="js/index_floor.js"></script>
     <!--左导航-->
@@ -32,62 +32,66 @@
 </head>
 <body>
     <!--header-->
-    <div class="container-fluid header">
-        <div class="row header-inner">
-            <div class="col-lg-1 col-lg-push-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-5 logo">
+    <div class="header">
+        <div class="header-inner">
+            <div class="logo">
                 <a href="index.html"><img src="images/logo.png"/></a>
             </div>
-            <div class="col-lg-6 col-lg-push-4 hidden-md hidden-sm hidden-xs nav" id="nav">
+            <div class="nav" id="nav">
                 <ul class="clearfix">
                     <li class="active"><a href="index.html">首页</a></li>
                     <li class="hasMenu">
-                        <a href="anli.html">项目案例<span>ˇ</span></a>
-                        <ul class="subMenu">
+                        <a href="anli.html">智能场景应用</a>
+                        <!--<a href="anli.html">项目案例<span>ˇ</span></a>-->
+                        <!--<ul class="subMenu">
                             <li><a href="xiangqing.html">现代风格</a></li>
                             <li><a href="xiangqing.html">简约风格</a></li>
                             <li><a href="xiangqing.html">美式风格</a></li>
                             <li><a href="xiangqing.html">欧式风格</a></li>
-                        </ul>
+                        </ul>-->
                     </li>
                     <li class="hasMenu">
-                        <a href="#">集团概况<span>ˇ</span></a>
-                        <ul class="subMenu">
+                        <a href="product.html">产品中心</a>
+                        <!--<a href="#">集团概况<span>ˇ</span></a>-->
+                        <!--<ul class="subMenu">
                             <li><a href="#">发展历程</a></li>
                             <li><a href="#">招聘信息</a></li>
                             <li><a href="#">关于我们</a></li>
-                        </ul>
+                        </ul>-->
                     </li>
                     <li class="hasMenu">
-                        <a href="#">服务范围<span>ˇ</span></a>
-                        <ul class="subMenu">
+                        <a href="anli.html">装修案例</a>
+                        <!--<a href="#">服务范围<span>ˇ</span></a>-->
+                        <!--<ul class="subMenu">
                             <li><a href="#">新房装修</a></li>
                             <li><a href="#">老房改造</a></li>
                             <li><a href="#">室内设计</a></li>
-                        </ul>
+                        </ul>-->
                     </li>
-                    <li><a href="product.html">产品手册</a></li>
+                    <li><a href="xiangqing.html">智能化生活体验</a></li>
                     <li class="hasMenu">
-                        <a href="#">资讯中心<span>ˇ</span></a>
-                        <ul class="subMenu">
+                        <a href="about.html">关于我们</a>
+                        <!--<a href="#">资讯中心<span>ˇ</span></a>-->
+                        <!--<ul class="subMenu">
                             <li><a href="#">装修大降价</a></li>
                             <li><a href="#">装修课堂</a></li>
                             <li><a href="#">装修问答</a></li>
-                        </ul>
+                        </ul>-->
                     </li>
-                    <li><a href="about.html">联系我们</a></li>
+                    <!--<li><a href="about.html">联系我们</a></li>-->
                 </ul>
             </div>
-            <div class="hidden-lg visible-md visible-sm visible-xs col-md-1 col-md-offset-10  col-sm-1 col-sm-offset-10 col-xs-1 col-xs-offset-10 NewNav" id="NewNav">
+            <div class="NewNav" id="NewNav">
                 <img src="images/icon/nav.svg" id="NewNav-ctr"/>
             </div>
         </div>
     </div>
     <!--banner-->
     <div class="slider banner" id="banner">
-        <ul class="slider-main">
-            <li><img src="images/banner.png" alt=""></li>
-            <li><img src="images/banner2.png" alt=""></li>
-            <li><img src="images/banner3.png" alt=""></li>
+        <ul class="slider-main clearfix">
+            <a href="product.html"><li><img src="images/banner.png"></li></a>
+            <a href="anli.html"><li><img src="images/banner2.png"></li></a>
+            <a href="xiangqing.html"><li><img src="images/banner3.png"></li></a>
         </ul>
     </div>
     <!--左导航-->
@@ -144,7 +148,7 @@
                     <li>德诚智慧家</li>
                     <li>武汉市武昌区楚商大厦三楼</li>
                     <li><a href="mailto:123456789@qq.com">12345678@qq.com</a></li>
-                    <li>027-12345678</li>
+                    <li><a href="tel:027012345678">027-12345678</a></li>
                 </ul>
             </div>
         </div>
@@ -167,62 +171,61 @@
     </div>
 
     <!--案例-->
-    <div class="section anli">
+    <div class="section anli" id="anli">
         <div class="title clearfix">
             <h2>案例展示</h2>
             <div class="line1"></div>
             <div class="line2"></div>
             <p>家居设计简单的说，就是家庭居住环境<br>
-            办公场所、公共空间或者是商业空间的整体陈设风格以及饰品设计搭配
+                办公场所、公共空间或者是商业空间的整体陈设风格以及饰品设计搭配
             </p>
         </div>
-        <div class="container content">
-            <ul class="row">
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li">
+        <div class="content">
+            <ul class="content_ul clearfix">
+                <li class="li li_1">
                     <a href="anli.html">
                         <img src="images/anli1.png"/>
                         <div class="info"><h5>现代风格</h5></div>
                     </a>
                 </li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li">
+                <li class="li li_2">
                     <a href="anli.html">
                         <img src="images/anli2.png"/>
                         <div class="info"><h5>北欧风格</h5></div>
                     </a>
                 </li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li">
+                <li class="li li_3">
                     <a href="anli.html">
                         <img src="images/anli3.png"/>
                         <div class="info"><h5>简约风格</h5></div>
                     </a>
                 </li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li">
+                <li class="li li_4">
                     <a href="anli.html">
                         <img src="images/anli4.png"/>
                         <div class="info"><h5>美式风格</h5></div>
                     </a>
                 </li>
-            </ul>
-            <ul class="row">
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li">
+
+                <li class="li li_5">
                     <a href="anli.html">
                         <img src="images/anli5.png"/>
                         <div class="info"><h5>现代风格</h5></div>
                     </a>
                 </li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li">
+                <li class="li li_6">
                     <a href="anli.html">
                         <img src="images/anli6.png"/>
                         <div class="info"><h5>北欧风格</h5></div>
                     </a>
                 </li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li">
+                <li class="li li_7">
                     <a href="anli.html">
                         <img src="images/anli7.png"/>
                         <div class="info"><h5>简约风格</h5></div>
                     </a>
                 </li>
-                <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6 li">
+                <li class="li li_8">
                     <a href="anli.html">
                         <img src="images/anli8.png"/>
                         <div class="info"><h5>美式风格</h5></div>
@@ -232,9 +235,9 @@
         </div>
     </div>
     <!--宣传视频-->
-    <div class="section container-fluid shiping" id="shipin">
-        <div class="row">
-            <div class="col-lg-4 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 media">
+    <div class="section shipin" id="shipin">
+        <div class="shipin_wrap clearfix">
+            <div class="media">
                 <div class="bg"></div>
                 <div class="video">
                     <div class="player">
@@ -243,123 +246,105 @@
                     <img src="images/video1.png"/>
                 </div>
             </div>
-            <div class="col-lg-4 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12 text">
+            <div class="text">
                 <div class="title clearfix">
                     <h2>宣传视频</h2>
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <p>家装设计是指家庭装修设计，在家庭正式装潢开工前进行功能格局上的规划设计,
-                    各空间界面的装饰设计。家装设计中的配色没有难看的颜色,只有不和谐的配色。在一所房子中,
-                    色彩的使用还蕴藏着健康的学问。太强烈刺激的色彩，易使人产生烦躁的感觉或影响人的心理健康，
-                    把握一些基本原则，家庭装饰的用色并不难。
+                        各空间界面的装饰设计。家装设计中的配色没有难看的颜色,只有不和谐的配色。在一所房子中,
+                        色彩的使用还蕴藏着健康的学问。太强烈刺激的色彩，易使人产生烦躁的感觉或影响人的心理健康，
+                        把握一些基本原则，家庭装饰的用色并不难。
                     </p>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 text-wrap">
-                    <div class="txt">
-                        <ul class="txt-ctr clearfix">
-                            <li class="clearfix">
-                                <div class="icon"><img src="images/shipin-ico1.png"/></div>
-                                <div class="info">
-                                    <h3><a href="product.html"><span>XXXX</span><span>灯</span><span>光</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
-                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
-                                        固定和保护光源所需的全部零件，以</p>
-                                </div>
-                            </li>
-                            <li class="clearfix">
-                                <div class="icon"><img src="images/shipin-ico2.png"/></div>
-                                <div class="info">
-                                    <h3><a href="product.html"><span>XXXX</span><span>家</span><span>电</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
-                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
-                                        固定和保护光源所需的全部零件，以</p>
-                                </div>
-                            </li>
-                            <li class="clearfix">
-                                <div class="icon"><img src="images/shipin-ico3.png"/></div>
-                                <div class="info">
-                                    <h3><a href="product.html"><span>XXXX</span><span>安</span><span>防</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
-                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
-                                        固定和保护光源所需的全部零件，以</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="txt-ctr clearfix">
-                            <li class="clearfix">
-                                <div class="icon"><img src="images/shipin-ico2.png"/></div>
-                                <div class="info">
-                                    <h3><a href="product.html"><span>XXXX</span><span>家</span><span>电</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
-                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
-                                        固定和保护光源所需的全部零件，以</p>
-                                </div>
-                            </li>
-                            <li class="clearfix">
-                                <div class="icon"><img src="images/shipin-ico3.png"/></div>
-                                <div class="info">
-                                    <h3><a href="product.html"><span>XXXX</span><span>安</span><span>防</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
-                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
-                                        固定和保护光源所需的全部零件，以</p>
-                                </div>
-                            </li>
-                            <li class="clearfix">
-                                <div class="icon"><img src="images/shipin-ico1.png"/></div>
-                                <div class="info">
-                                    <h3><a href="product.html"><span>XXXX</span><span>灯</span><span>光</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
-                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
-                                        固定和保护光源所需的全部零件，以</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="txt-ctr clearfix">
-                            <li class="clearfix">
-                                <div class="icon"><img src="images/shipin-ico3.png"/></div>
-                                <div class="info">
-                                    <h3><a href="product.html"><span>XXXX</span><span>安</span><span>防</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
-                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
-                                        固定和保护光源所需的全部零件，以</p>
-                                </div>
-                            </li>
-                            <li class="clearfix">
-                                <div class="icon"><img src="images/shipin-ico2.png"/></div>
-                                <div class="info">
-                                    <h3><a href="product.html"><span>XXXX</span><span>家</span><span>电</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
-                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
-                                        固定和保护光源所需的全部零件，以</p>
-                                </div>
-                            </li>
-                            <li class="clearfix">
-                                <div class="icon"><img src="images/shipin-ico1.png"/></div>
-                                <div class="info">
-                                    <h3><a href="product.html"><span>XXXX</span><span>灯</span><span>光</span><span>控</span><span>制</span><span>系</span><span>统</span></a></h3>
-                                    <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
-                                        固定和保护光源所需的全部零件，以</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="ctr-btn clearfix">
-                            <li class="active"></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
+        <div class="chanpin clearfix">
+            <div class="text-wrap">
+                <div class="txt">
+                    <ul class="txt-ctr clearfix">
+                        <li class="clearfix">
+                            <div class="icon"><img src="images/shipin-ico1.png"/></div>
+                            <div class="info">
+                                <h3><a href="product.html"><span>智</span><span>能</span><span>控</span><span>制</span><span>中</span><span>心</span></a></h3>
+                                <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
+                                    固定和保护光源所需的全部零件，以</p>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="icon"><img src="images/shipin-ico2.png"/></div>
+                            <div class="info">
+                                <h3><a href="product.html"><span>智</span><span>能</span><span>照</span><span>明</span><span>系</span><span>统</span></a></h3>
+                                <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
+                                    固定和保护光源所需的全部零件，以</p>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="icon"><img src="images/shipin-ico3.png"/></div>
+                            <div class="info">
+                                <h3><a href="product.html"><span>智</span><span>能</span><span>安</span><span>防</span><span>系</span><span>统</span></a></h3>
+                                <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
+                                    固定和保护光源所需的全部零件，以</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="txt-ctr clearfix">
+                        <li class="clearfix">
+                            <div class="icon"><img src="images/shipin-ico2.png"/></div>
+                            <div class="info">
+                                <h3><a href="product.html"><span>暖</span><span>通</span><span>环</span><span>境</span><span>系</span><span>统</span></a></h3>
+                                <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
+                                    固定和保护光源所需的全部零件，以</p>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="icon"><img src="images/shipin-ico3.png"/></div>
+                            <div class="info">
+                                <h3><a href="product.html"><span>智</span><span>能</span><span>影</span><span>音</span><span>系</span><span>统</span></a></h3>
+                                <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
+                                    固定和保护光源所需的全部零件，以</p>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="icon"><img src="images/shipin-ico1.png"/></div>
+                            <div class="info">
+                                <h3><a href="product.html"><span>能</span><span>源</span><span>管</span><span>理</span><span>系</span><span>统</span></a></h3>
+                                <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
+                                    固定和保护光源所需的全部零件，以</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="txt-ctr clearfix">
+                        <li class="clearfix">
+                            <div class="icon"><img src="images/shipin-ico3.png"/></div>
+                            <div class="info">
+                                <h3><a href="product.html"><span>门</span><span>窗</span><span>遮</span><span>阳</span><span>系</span><span>统</span></a></h3>
+                                <p>灯具，是指能透光、分配和改变光源分布的器具，包括除光源外有所用于
+                                    固定和保护光源所需的全部零件，以</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="ctr-btn clearfix">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 pic">
+            <div class="pic">
                 <img src="images/shipin-pic.png" class="img"/>
+                <img src="images/shipin-pic2.jpg" class="img"/>
                 <img src="images/shipin-pic.png" class="img"/>
+                <img src="images/shipin-pic2.jpg" class="img"/>
                 <img src="images/shipin-pic.png" class="img"/>
-                <img src="images/shipin-pic.png" class="img"/>
-                <img src="images/shipin-pic.png" class="img"/>
-                <img src="images/shipin-pic.png" class="img"/>
-                <img src="images/shipin-pic.png" class="img"/>
-                <img src="images/shipin-pic.png" class="img"/>
+                <img src="images/shipin-pic2.jpg" class="img"/>
                 <img src="images/shipin-pic.png" class="img"/>
             </div>
         </div>
     </div>
     <!--智能改变生活-->
     <div class="section zhineng" style="background:url('images/zhineng2.png') no-repeat center;background-size:cover;">
-        <div class="inner container-fluid">
+        <div class="inner">
             <div class="title">
                 <h2><span>智</span><span>能</span><span>改</span><span>变</span><span>生</span><span>活</span></h2>
                 <p>
@@ -367,20 +352,20 @@
                     <span>家</span><span>居</span><span>难</span><span>题</span><span>一</span><span>部</span><span>解</span><span>决</span>
                 </p>
             </div>
-            <ul class="row clearfix">
-                <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4 li">
+            <ul class="content clearfix">
+                <li class="li">
                     <img src="images/zhineng-icon_01.png"/>
                     <p><span>科</span><span>学</span><span>全</span><span>屋</span><span>定</span><span>制</span></p>
                 </li>
-                <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4 li">
+                <li class="li">
                     <img src="images/zhineng-icon_02.png"/>
                     <p><span>远</span><span>程</span><span>智</span><span>能</span><span>遥</span><span>控</span></p>
                 </li>
-                <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4 li">
+                <li class="li">
                     <img src="images/zhineng-icon_03.png"/>
                     <p><span>全</span><span>屋</span><span>环</span><span>保</span><span>材</span><span>质</span></p>
                 </li>
-                <li class="col-lg-3 col-md-3 col-sm-4  li">
+                <li class="li">
                     <img src="images/zhineng-icon_04.png"/>
                     <p><span>不</span><span>为</span><span>公</span><span>摊</span><span>买</span><span>单</span></p>
                 </li>
@@ -388,12 +373,12 @@
         </div>
     </div>
     <!--公司介绍-->
-    <div class="section container-fluid jieshao">
-        <div class="row clearfix">
-            <div class="col-lg-3 col-lg-offset-2 col-md-12 col-sm-12 col-xs-12 pic">
+    <div class="section jieshao">
+        <div class="content clearfix">
+            <div class="pic">
                 <img src="images/jieshao.png"/>
             </div>
-            <div class="col-lg-5 col-md-11 col-sm-11 col-xs-11 text">
+            <div class="text">
                 <h2>公司介绍</h2>
                 <h3>ABOUT US</h3>
                 <p>随着社会的发展和科学技术的进步，建筑所包含的内容、所要解决的问题越来越复杂，涉及的相关科学越来越多，材料上、技术上的变化
@@ -403,7 +388,6 @@
             </div>
         </div>
     </div>
-
     <!--设计师-->
     <div class="section shejishi" style="background:url('images/shejishi-bg.png') no-repeat center;background-size:cover;">
        <div class="inner">
@@ -509,45 +493,47 @@
         </ul>
     </div>
     <!--footer-->
-    <div class="container-fluid footer">
-        <ul class="row footerNav">
-                <li class="col-lg-2 col-lg-pull-5 col-md-2 col-sm-4 col-xs-4"><a href="#">关于我们</a></li>
-                <li class="col-lg-2 col-lg-pull-3 col-md-2 col-sm-4 col-xs-4"><a href="#">设计团队</a></li>
-                <li class="col-lg-2 col-lg-pull-1 col-md-2 col-sm-4 col-xs-4"><a href="#">作品展示</a></li>
-                <li class="col-lg-2 col-lg-push-1 col-md-2 col-sm-4 col-xs-4"><a href="#">合作企业</a></li>
-                <li class="col-lg-2 col-lg-push-3 col-md-2 col-sm-4 col-xs-4"><a href="#">新闻资讯</a></li>
-                <li class="col-lg-2 col-lg-push-5 col-md-2 col-sm-4 col-xs-4"><a href="#">招聘信息</a></li>
-        </ul>
-        <!--<ul class="footerNav">
-            <li><a href="#">关于我们</a></li>
-            <li><a href="#">设计团队</a></li>
-            <li><a href="#">作品展示</a></li>
-            <li><a href="#">合作企业</a></li>
-            <li><a href="#">新闻资讯</a></li>
-            <li><a href="#">招聘信息</a></li>
-        </ul>-->
-        <div class="row footerInfo">
-            <div class="col-lg-3 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 footerAbout">
-                <h5><span>德</span><span>诚</span><span>智</span><span>慧</span><span>家</span></h5>
-                <p>这里加点文案介绍这里加点文案介绍这里加点文案介绍这里加点文案介绍这里加 点文案介绍这里加点文案介绍这里加点文案介绍这里加点文案介绍</p>
-                <ul class="link clearfix">
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 footerContact">
-                <h5>联系方式</h5>
-                <div class="line"></div>
-                <ul class="link">
-                    <li><img src="images/icon/address.svg"/>这里是地址这里是地址这里是地址这里是地址这里是地址</li>
-                    <li><img src="images/icon/tell.svg"/>
-                        <span>(</span><span>8</span><span>8</span><span>8</span><span>8</span><span>)</span>
-                        <span>0</span><span>2</span><span>7</span><span>-</span><span>8</span><span>8</span>
-                        <span>8</span><span>8</span><span>8</span><span>8</span><span>8</span>
-                    <li><img src="images/icon/message.svg"/>8888888@sina.com</li>
-                </ul>
+    <div class="footer">
+        <div class="footer_inner">
+            <ul class="footerNav clearfix">
+                <li class=""><a href="#">关于我们</a></li>
+                <li class=""><a href="#">设计团队</a></li>
+                <li class=""><a href="#">作品展示</a></li>
+                <li class=""><a href="#">合作企业</a></li>
+                <li class=""><a href="#">新闻资讯</a></li>
+                <li class="last_li"><a href="#">招聘信息</a></li>
+            </ul>
+            <div class="footerInfo clearfix">
+
+                <div class="footerAbout">
+                    <h5><span>德</span><span>诚</span><span>智</span><span>慧</span><span>家</span></h5>
+                    <p>这里加点文案介绍这里加点文案介绍这里加点文案介绍这里加点文案介绍这里加 点文案介绍这里加点文案介绍这里加点文案介绍这里加点文案介绍</p>
+                    <ul class="link clearfix">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+
+                <div class="footerContact">
+                    <h5>联系方式</h5>
+                    <div class="line"></div>
+                    <ul class="link">
+                        <li><img src="images/icon/address.svg"/>这里是地址这里是地址这里是地址这里是地址这里是地址</li>
+                        <li>
+                            <a href="tel:027-12345678">
+                                <img src="images/icon/tell.svg"/>
+                                <span>(</span><span>8</span><span>8</span><span>8</span><span>8</span><span>)</span>
+                                <span>0</span><span>2</span><span>7</span><span>-</span><span>8</span><span>8</span>
+                                <span>8</span><span>8</span><span>8</span><span>8</span><span>8</span>
+                            </a>
+                        <li>
+                            <a href="mailto:88888888@sina.com"><img src="images/icon/message.svg"/>8888888@sina.com</a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </div>
@@ -654,7 +640,7 @@
         var win_w_state;
         var title_W;
 
-        if(win_w<1200){
+        if(win_w<=1024){
             win_w_state=$(document).width();
             title_W=0;
         }else{
