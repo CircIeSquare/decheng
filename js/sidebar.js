@@ -17,4 +17,9 @@ $(function(){
     $("#sidebar-left .body .search .close").on("click",function(){
         $("#sidebar-left .title").trigger("click");
     });
+    
+    //Window Resize DOM重载
+    $(window).resize(function(){
+       window.location.reload(); 
+    });   
 });
