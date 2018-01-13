@@ -23,3 +23,8 @@ $(function(){
        window.location.reload(); 
     });   
 });
+
+//Window Resize DOM重载
+$(window).resize(function(){
+   window.location.reload(); 
+});   
