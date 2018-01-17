@@ -85,6 +85,57 @@
 
             //设置标题样式
             obj.find('.title').css(titleCss);
+         
+           //填充导航内容,消除页面加载时候，左边导航文字排版混乱Bug
+            var tmp='<div class="top"></div>'+
+                '<div class="search">'+
+                '<input type="text" maxlength="12"/>'+
+                '<img src="images/sidebar-search.png"/>'+
+                '<div class="close">'+
+                '<img src="images/icon/close.svg"/>'+
+                '</div>'+
+                '</div>'+
+                '<div class="sidebar-nav">'+
+                '<div class="nav">'+
+                '<div class="li"><a href="index.html">首页</a></div>'+
+                '<div class="li li-has hasMenu"><a href="anli.html">项目案例</a></div>'+
+                '<ul class="navContent">'+
+                '<li><a href="#">现代风格</a></li>'+
+                '<li><a href="#">简约风格</a></li>'+
+                '<li><a href="#">美式风格</a></li>'+
+                '<li><a href="#">欧式风格</a></li>'+
+                '</ul>'+
+                '<div class="li li-has hasMenu"><a href="#">集团概况</a></div>'+
+                '<ul class="navContent">'+
+                '<li><a href="#">发展历程</a></li>'+
+                '<li><a href="#">招聘信息</a></li>'+
+                '<li><a href="#">关于我们</a></li>'+
+                '</ul>'+
+                '<div class="li li-has hasMenu"><a href="#">服务范围</a></div>'+
+                '<ul class="navContent">'+
+                '<li><a href="#">新房装修</a></li>'+
+                '<li><a href="#">老房改造</a></li>'+
+                '<li><a href="#">室内设计</a></li>'+
+                '</ul>'+
+                '<div class="li"><a href="product.html">产品手册</a></div>'+
+                '<div class="li li-has hasMenu"><a href="#">资讯中心</a></div>'+
+                '<ul class="navContent">'+
+                '<li><a href="#">装修大降价</a></li>'+
+                '<li><a href="#">装修课堂</a></li>'+
+                '<li><a href="#">装修问答</a></li>'+
+                '</ul>'+
+                '<div class="li"><a href="about.html">联系我们</a></div>'+
+                '</div>'+
+                '</div>'+
+                '<div class="address">'+
+                '<ul>'+
+                '<li>德诚智慧家</li>'+
+                '<li>武汉市武昌区楚商大厦三楼</li>'+
+                '<li><a href="mailto:123456789@qq.com">12345678@qq.com</a></li>'+
+                '<li><a href="tel:027012345678">027-12345678</a></li>'+
+                '</ul>'+
+                '</div>';
+            obj.find('.body').html(tmp);
         },
 
         //左侧栏样式
